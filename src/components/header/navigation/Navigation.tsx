@@ -2,14 +2,14 @@
 import MenuButton from './menu-button/MenuButton';
 
 // Interface
-import { INavigationList } from '../../../interfaces/INavigation';
+import { INavigation } from '../../../interfaces/INavigation';
 
 // Hooks
 import { useRef, useState } from 'react';
 
 // Props destructuring
 interface Props {
-  list: INavigationList[];
+  list: INavigation[];
 }
 
 // Navigation (routing links) main function
