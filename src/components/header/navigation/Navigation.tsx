@@ -2,7 +2,7 @@
 import MenuButton from './menu-button/MenuButton';
 
 // Interface
-import { INavigationList } from '../../../interfaces/INavigationList';
+import { INavigationList } from '../../../interfaces/INavigation';
 
 // Hooks
 import { useRef, useState } from 'react';

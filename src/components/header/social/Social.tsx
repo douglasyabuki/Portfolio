@@ -1,7 +1,7 @@
 // Interfaces
-import { ISocialList } from '../../../interfaces/ISocialList';
+import { ISocial } from '../../../interfaces/ISocial';
 interface Props {
-  list: ISocialList[];
+  list: ISocial[];
 }
 
 export default function Social({ list }: Props) {

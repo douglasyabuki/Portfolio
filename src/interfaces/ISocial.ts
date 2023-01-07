@@ -1,5 +1,5 @@
 // Interface of items on social-list.ts
-export interface ISocialList {
+export interface ISocial{
   id: number,
   href: string,
   icon: string,

@@ -1,7 +1,7 @@
 // Interface
-import { INavigationList } from "../../../../interfaces/INavigationList"
+import { INavigation } from "../../../../interfaces/INavigation"
 
-export const navigationList: INavigationList[] = [
+export const navigationList: INavigation[] = [
   { id: 0, name: 'Home', link: '#home', icon: 'fa fa-home' },
   { id: 1, name: 'About', link: '#about', icon: 'fa fa-user' },
   { id: 2, name: 'Resume', link: '#resume', icon: 'fa fa-file-text' },
