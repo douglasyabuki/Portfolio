@@ -12,8 +12,11 @@ export default function MainView() {
       <Home></Home>
       <div className="w-screen h-32 custom-bg-divider-1"></div>
       <About></About>
+      <div className="w-screen h-32 custom-bg-divider-2"></div>
       <Resume></Resume>
+      <div className="w-screen h-32 custom-bg-divider-1"></div>
       <Projects></Projects>
+      <div className="w-screen h-32 custom-bg-divider-2"></div>
       <Contact></Contact>
     </div>
   );
