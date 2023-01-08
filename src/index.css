@@ -7,3 +7,11 @@ body,
   display: flex;
   overflow: hidden;
 }
+
+.custom-bg-1 {
+  background: linear-gradient(110deg, #23202a 60%, #1e1b24 60%);
+}
+
+.custom-bg-2 {
+  background: linear-gradient(110deg, #1e1b24 60%, #23202a 60%);
+}

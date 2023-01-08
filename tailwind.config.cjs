@@ -4,28 +4,27 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'xs': '480px',
-        '3xl' : '2000px',
-        '4xl' : '2400px'
+        xs: '480px',
+        '3xl': '2000px',
+        '4xl': '2400px',
       },
       fontFamily: {
-        'header': ['Sansita', 'sans-serif']
+        header: ['Sansita', 'sans-serif'],
       },
       fontSize: {
         xsmall: ['.6rem', '.9rem'],
         xsmaller: ['.45rem', '.62rem'],
-        xsmallest: ['.3rem', '.45rem']
+        xsmallest: ['.3rem', '.45rem'],
       },
       colors: {
         'background-black': ' #19181F',
         'background-transparent-black': ' #19181F80',
-        'background-div1' : '#23202A',
-        'background-div2' : '#1E1B24',
-        'purplish-gray' : '#C2C6DD',
+        'background-div1': '#23202A',
+        'background-div2': '#1E1B24',
+        'purplish-gray': '#C2C6DD',
         'not-so-white': '#FAFAFA',
       },
     },
-
   },
   plugins: [],
 };
