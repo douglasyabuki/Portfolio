@@ -9,7 +9,7 @@ interface Props {
 
 export default function Testimonials({ list }: Props) {
   return (
-    <div className='h-auto w-auto custom-bg-1 p-4 sm:p-7 md:p-8 lg:p-10 rounded-xl'>
+    <div className='h-auto w-auto flex rounded-xl justify-center gap-3'>
       {list.map((item) => (
         <div className="" key={item.id}>
           <TestimonialCard
