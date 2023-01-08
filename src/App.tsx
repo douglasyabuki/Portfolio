@@ -12,7 +12,7 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <main className="h-screen bg-neutral-900 font-sans text-white">
+    <main className="h-full bg-neutral-900 font-sans text-white">
       <Header></Header>
       <MainView></MainView>
       <Footer></Footer>

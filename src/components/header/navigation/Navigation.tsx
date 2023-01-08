@@ -53,7 +53,7 @@ export default function Navigation({ list }: Props) {
         className={`relative block lg:flex`}
       >
         {isActive ? (
-          <div className="container absolute right-5 top-16 h-auto w-56 space-y-6 bg-background-black py-10 opacity-80">
+          <div className="container absolute right-5 top-16 h-auto w-56 space-y-6 bg-background-black py-10 opacity-95">
             {mappedLinks}
           </div>
         ) : (

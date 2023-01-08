@@ -1,14 +1,20 @@
 // Components
-import Testimonials from "./about/testimonial/Testimonials";
-
-// Const
-import { testimonialList } from "./about/testimonial/testimonial-list/testimonial-list";
+import About from "./about/About";
+import Home from "./home/Home";
+import Resume from "./resume/Resume";
+import Projects from "./projects/Projects";
+import Contact from "./contact/Contact";
 
 // Main view main function
-export default function MainView () {
+export default function MainView() {
   return (
-    <div className="flexbox h-screen w-screen px-4 bg-slate-400 items-center py-16 sm:px-7 md:px-8 lg:px-10">
-      <Testimonials list={testimonialList}></Testimonials>
+    <div className="block h-max w-screen items-center bg-background-black">
+      <Home></Home>
+      <div className="w-screen h-32 custom-bg-divider-1"></div>
+      <About></About>
+      <Resume></Resume>
+      <Projects></Projects>
+      <Contact></Contact>
     </div>
   );
 }
