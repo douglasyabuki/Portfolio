@@ -10,7 +10,6 @@ export default function AnimatedWelcome() {
     setIsExtended(!isExtended)
   }
 
-
   // Returns the animated welcome to Home.tsx
   return (
     <div
@@ -19,7 +18,7 @@ export default function AnimatedWelcome() {
       className="container m-auto h-auto w-min text-center font-semibold my-5 lg:my-0 lg:mb-3 lg:ml-0 xl:mb-12 2xl:mb-16"
     >
       {isExtended ? (
-        <h1 className="flex rounded-full h-auto w-auto bg-background-black p-3 text-2xl transition-all duration-500 ease-out 2xl:text-2xl 3xl:text-3xl ">
+        <h1 className="flex rounded-full h-auto w-auto bg-background-black p-3 text-2xl transition-all duration-500 ease-out 2xl:text-2xl 3xl:text-3xl">
           Welcome
           <i className="fa fa-exclamation visible ml-2 text-3xl 2xl:text-4xl 3xl:text-4xl"></i>
         </h1>
