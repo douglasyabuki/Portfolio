@@ -9,7 +9,7 @@ interface Props {
 
 export default function TestimonialCard({ position, relation, testimonial }: Props) {
   return (
-    <div className="container relative h-full w-72 rounded-xl text-center bg-background-div2 p-4 sm:p-7 md:p-8 lg:p-10">
+    <div className="container relative h-full w-72 rounded-xl text-center bg-background-div1 p-4 sm:p-7 md:p-8 lg:p-10 scale-90 hover:scale-100 cursor-pointer">
       <div className="container h-3/5 relative flex items-center">
         <i className="fa fa-quote-left absolute left-0 top-0 text-5xl text-purplish-gray opacity-20"></i>
         <p className="pt-4 text-sm opacity-80">{testimonial}</p>

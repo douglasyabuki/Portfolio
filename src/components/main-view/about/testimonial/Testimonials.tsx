@@ -9,16 +9,19 @@ interface Props {
 
 export default function Testimonials({ list }: Props) {
   return (
-    <div className='h-auto w-auto flex rounded-xl justify-center gap-3 overflow-hidden'>
-      {list.map((item) => (
-        <div className="" key={item.id}>
-          <TestimonialCard
-            position={item.position}
-            relation={item.relation}
-            testimonial={item.testimonial}
-          ></TestimonialCard>
-        </div>
-      ))}
+    <div>
+      <h1 className='text-3xl font-bold md:text-4xl xl:text-5xl 2xl:text-6xl my-4'>What they say about him</h1>
+      <div className="flex h-auto w-auto justify-center gap-3 overflow-hidden rounded-xl">
+        {list.map((item) => (
+          <div className="" key={item.id}>
+            <TestimonialCard
+              position={item.position}
+              relation={item.relation}
+              testimonial={item.testimonial}
+            ></TestimonialCard>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
