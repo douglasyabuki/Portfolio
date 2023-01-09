@@ -1,16 +1,16 @@
-// Interface
-import { ITestimonial } from '../../../../../interfaces/ITestimonial';
-
+// Props destructuring
 interface Props {
   position: string;
   relation: string;
   testimonial: string;
 }
 
+// Testimonial card main function
 export default function TestimonialCard({ position, relation, testimonial }: Props) {
+  // Returns a single testimonial card to Testimonials.tsx
   return (
-    <div className="container relative h-full w-72 rounded-xl text-center bg-background-div1 p-4 sm:p-7 md:p-8 lg:p-10 scale-90 hover:scale-100 cursor-pointer">
-      <div className="container h-3/5 relative flex items-center">
+    <div className="container relative h-full w-72 scale-90 cursor-pointer rounded-xl bg-background-div1 p-4 text-center duration-300 hover:scale-100 sm:p-7 md:p-8 lg:p-10 shadow-lg shadow-black">
+      <div className="container relative flex h-3/5 items-center">
         <i className="fa fa-quote-left absolute left-0 top-0 text-5xl text-purplish-gray opacity-20"></i>
         <p className="pt-4 text-sm opacity-80">{testimonial}</p>
       </div>
@@ -22,9 +22,3 @@ export default function TestimonialCard({ position, relation, testimonial }: Pro
     </div>
   );
 }
-// export interface ITestimonial {
-//   id: number;
-//   position: string;
-//   relation: string;
-//   testimonial: string;
-// }
