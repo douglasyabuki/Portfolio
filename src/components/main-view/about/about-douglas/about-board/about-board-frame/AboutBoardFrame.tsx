@@ -6,13 +6,17 @@ interface Props {
 
 export default function AboutBoardFrame({ currentSection }: Props) {
   return (
-    <div className="relative h-full rounded-xl transition-all">
-      <div className='p-12 container w-4/6'>
-      <h1 className="text-4xl mb-4">{currentSection.sectionTitle}</h1>
-      <h1 className="text-xl">{currentSection.sectionContent}</h1>
+    <div className="relative h-full rounded-xl transition-all text-center lg:text-left py-5">
+      <div className="container px-4 lg:w-4/6 p-2 lg:p-12">
+        <h1 className="mb-4 text-4xl">{currentSection.sectionTitle}</h1>
+        <h1 className="text-xl opacity-80">{currentSection.sectionContent}</h1>
       </div>
-      <div className="absolute top-4 -right-4 bg-background-div2 bg-opacity-90 rounded-3xl shadow-lg shadow-black">
-        <img src={currentSection.sectionImage} alt={currentSection.sectionImageAlt} className=' w-96 h-auto rounded-3xl'/>
+      <div className="relative p-2 w-auto lg:rounded-3xl lg:bg-background-div2 lg:bg-opacity-90 shadow-lg lg:shadow-black lg:absolute lg:top-4 lg:-right-4">
+        <img
+          src={currentSection.sectionImage}
+          alt={currentSection.sectionImageAlt}
+          className="w-60 m-auto h-auto lg:w-96 rounded-3xl"
+        />
       </div>
     </div>
   );
