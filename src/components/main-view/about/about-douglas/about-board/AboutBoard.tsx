@@ -36,7 +36,6 @@ export default function AboutBoard({ infoList }: Props) {
         {infoList.map((item) => (
           <AboutBoardSelector
             onClickHandler={() => onClickHandler(item.sectionId)}
-            id={item.sectionId}
             key={item.sectionId}
             icon={item.sectionIcon}
             title={item.sectionTitle}
@@ -44,7 +43,7 @@ export default function AboutBoard({ infoList }: Props) {
         ))}
       </div>
       <div className="container w-full relative block custom-bg-2 rounded-3xl shadow-md shadow-black">
-        <AboutBoardFrame currentSection={currentSection}></AboutBoardFrame>
+        {currentSection !== emptySection? <AboutBoardFrame currentSection={currentSection}></AboutBoardFrame> : <></>}
       </div>
     </div>
   );
