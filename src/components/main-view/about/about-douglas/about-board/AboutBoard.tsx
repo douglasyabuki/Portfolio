@@ -1,33 +1,50 @@
 // Components
-import AboutBoardFrame from "./about-board-frame/AboutBoardFrame";
-import AboutBoardSelector from "./about-board-selector/AboutBoardSelector";
+import AboutBoardSelector from './about-board-selector/AboutBoardSelector';
+import AboutBoardFrame from './about-board-frame/AboutBoardFrame';
 
 // Const
+import { emptySection } from '../about-info/empty-section';
 
 // Hooks
-import React, { useState } from "react";
+import { useState } from 'react';
 
 // Interfaces
-import { IAboutSection } from "../../../../../interfaces/IAboutSection";
+import { IAboutSection } from '../../../../../interfaces/IAboutSection';
 
+// Utils
+import { deepClone } from '../../../../../utils/deep-clone';
+
+// Props destructuring
 interface Props {
-  infoList: IAboutSection[],
+  infoList: IAboutSection[];
 }
 
-export default function AboutBoard({infoList}: Props) {
-  const [currentSection, setCurrentSection] = useState<number | null>(null);
+export default function AboutBoard({ infoList }: Props) {
+  const [currentSectionId, setCurrentSectionId] = useState<number | null>(null);
+  const [currentSection, setCurrentSection] = useState<IAboutSection>(emptySection);
+
+  const onClickHandler = (index: number) => {
+    setCurrentSectionId(index);
+    let copy = deepClone(currentSection);
+    copy = infoList[index];
+    setCurrentSection(copy);
+  };
 
   return (
-    <div className="group container block lg:flex">
-      <div className="flex w-min h-auto m-auto lg:block">
-      {infoList.map((item) => (
-        <AboutBoardSelector onClickHandler={() => setCurrentSection(item.sectionId)} id={item.sectionId} key={item.sectionId} icon={item.sectionIcon} title={item.sectionTitle}></AboutBoardSelector>
-      ))}
+    <div className="container block h-auto w-full bg-slate-500 rounded-3xl lg:flex my-20">
+      <div className="flex h-auto w-min lg:block py-12">
+        {infoList.map((item) => (
+          <AboutBoardSelector
+            onClickHandler={() => onClickHandler(item.sectionId)}
+            id={item.sectionId}
+            key={item.sectionId}
+            icon={item.sectionIcon}
+            title={item.sectionTitle}
+          ></AboutBoardSelector>
+        ))}
       </div>
-      <div>
-        {currentSection}
-      {/* <AboutBoardSelector id={} key={} icon="" title=""></AboutBoardSelector>
-      <AboutBoardFrame></AboutBoardFrame> */}
+      <div className="container relative block">
+        <AboutBoardFrame currentSection={currentSection}></AboutBoardFrame>
       </div>
     </div>
   );
