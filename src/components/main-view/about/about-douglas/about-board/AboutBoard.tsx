@@ -5,7 +5,7 @@ import AboutBoardSelector from "./about-board-selector/AboutBoardSelector";
 // Const
 
 // Hooks
-import { useState } from "react";
+import React, { useState } from "react";
 
 // Interfaces
 import { IAboutSection } from "../../../../../interfaces/IAboutSection";
@@ -19,11 +19,16 @@ export default function AboutBoard({infoList}: Props) {
 
   return (
     <div className="group container block lg:flex">
+      <div className="flex w-min h-auto m-auto lg:block">
       {infoList.map((item) => (
-        <AboutBoardSelector id={item.sectionId} key={item.sectionId} icon={item.sectionIcon} title={item.sectionTitle}></AboutBoardSelector>
+        <AboutBoardSelector onClickHandler={() => setCurrentSection(item.sectionId)} id={item.sectionId} key={item.sectionId} icon={item.sectionIcon} title={item.sectionTitle}></AboutBoardSelector>
       ))}
+      </div>
+      <div>
+        {currentSection}
       {/* <AboutBoardSelector id={} key={} icon="" title=""></AboutBoardSelector>
       <AboutBoardFrame></AboutBoardFrame> */}
+      </div>
     </div>
   );
 }
