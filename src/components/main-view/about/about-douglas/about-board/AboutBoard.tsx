@@ -31,8 +31,8 @@ export default function AboutBoard({ infoList }: Props) {
   };
 
   return (
-    <div className="container block h-auto w-full bg-slate-500 rounded-3xl lg:flex my-20">
-      <div className="flex h-auto w-min lg:block py-12">
+    <div className="container block h-auto w-full lg:flex py-20">
+      <div className="flex h-auto w-min lg:block py-12 lg:mr-6">
         {infoList.map((item) => (
           <AboutBoardSelector
             onClickHandler={() => onClickHandler(item.sectionId)}
@@ -43,7 +43,7 @@ export default function AboutBoard({ infoList }: Props) {
           ></AboutBoardSelector>
         ))}
       </div>
-      <div className="container relative block">
+      <div className="container relative block custom-bg-2 rounded-3xl shadow-md shadow-black">
         <AboutBoardFrame currentSection={currentSection}></AboutBoardFrame>
       </div>
     </div>
