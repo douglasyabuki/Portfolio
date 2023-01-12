@@ -9,9 +9,13 @@ interface Props {
   item: IAboutInfo;
 }
 
+// About Douglas main function
 export default function AboutDouglas({ item }: Props) {
+
+  // Destructuring the received props into different const
   const { title, content, infoList } = item;
-  // p-4 sm:p-7 md:p-8
+
+  // Returns personal information about Douglas to About.tsx
   return (
     <div className="container h-auto w-full py-20 lg:px-10 xl:px-20">
       <div className="block w-full justify-center py-8 text-center lg:flex lg:justify-between lg:text-left">

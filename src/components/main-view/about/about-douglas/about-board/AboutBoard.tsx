@@ -1,6 +1,6 @@
 // Components
-import AboutBoardSelector from './about-board-selector/AboutBoardSelector';
 import AboutBoardFrame from './about-board-frame/AboutBoardFrame';
+import AboutBoardSelector from './about-board-selector/AboutBoardSelector';
 
 // Const
 import { emptySection } from '../about-info/empty-section';
@@ -19,10 +19,14 @@ interface Props {
   infoList: IAboutSection[];
 }
 
+// About board main function
 export default function AboutBoard({ infoList }: Props) {
+
+  // Setting initial states (begins with no section selected)
   const [currentSectionId, setCurrentSectionId] = useState<number | null>(null);
   const [currentSection, setCurrentSection] = useState<IAboutSection>(emptySection);
 
+  // Whenever the user clicks a selector, both states change
   const onClickHandler = (index: number) => {
     setCurrentSectionId(index);
     let copy = deepClone(currentSection);
@@ -30,11 +34,14 @@ export default function AboutBoard({ infoList }: Props) {
     setCurrentSection(copy);
   };
 
+  // Returns the interactive info board about Douglas to AboutDouglas.tsx
   return (
     <div className="container block h-auto w-full lg:flex lg:py-20">
-      <div className="h-auto w-auto block lg:py-12 lg:mr-6 text-center">
+      <div className="block h-auto w-auto text-center lg:mr-6 lg:py-12">
         {infoList.map((item) => (
           <AboutBoardSelector
+            id={item.sectionId}
+            currentId={currentSectionId}
             onClickHandler={() => onClickHandler(item.sectionId)}
             key={item.sectionId}
             icon={item.sectionIcon}
@@ -42,8 +49,12 @@ export default function AboutBoard({ infoList }: Props) {
           ></AboutBoardSelector>
         ))}
       </div>
-      <div className="container w-full relative block custom-bg-2 rounded-3xl shadow-md shadow-black">
-        {currentSection !== emptySection? <AboutBoardFrame currentSection={currentSection}></AboutBoardFrame> : <></>}
+      <div className="custom-bg-2 container relative block w-full rounded-3xl shadow-md shadow-black">
+        {currentSection !== emptySection ? (
+          <AboutBoardFrame currentSection={currentSection}></AboutBoardFrame>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
