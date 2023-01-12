@@ -31,7 +31,7 @@ export default function Home() {
           <img
             src="/coding.jpg"
             alt="photo from unsplash arnold-francisca-f77Bh3inUpE-"
-            className="contain rounded-3xl"
+            className="contain rounded-3xl w-auto"
           />
         </div>
       </div>
