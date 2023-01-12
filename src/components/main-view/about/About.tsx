@@ -4,7 +4,7 @@ import Testimonials from './testimonial/Testimonials';
 
 // Const
 import { aboutInfo } from './about-douglas/about-info/about-info';
-import { testimonialList } from './testimonial/testimonial-list/testimonial-list';
+import { testimonialList } from './testimonial/testimonial-row/testimonial-list/testimonial-list';
 
 // About main function
 export default function About() {

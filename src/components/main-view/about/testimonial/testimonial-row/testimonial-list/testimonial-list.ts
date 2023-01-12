@@ -1,5 +1,5 @@
 // Interface
-import { ITestimonial } from "../../../../../interfaces/ITestimonial"
+import { ITestimonial } from "../../../../../../interfaces/ITestimonial";
 
 // Exports the list of testimonials
 export const testimonialList: ITestimonial[] = [
