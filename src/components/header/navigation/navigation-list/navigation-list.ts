@@ -2,9 +2,9 @@
 import { INavigation } from "../../../../interfaces/INavigation"
 
 export const navigationList: INavigation[] = [
-  { id: 0, name: 'Home', link: 'home', icon: 'fa fa-home' },
-  { id: 1, name: 'About', link: 'about', icon: 'fa fa-user' },
-  { id: 2, name: 'Resume', link: 'resume', icon: 'fa fa-file-text' },
-  { id: 3, name: 'Projects', link: 'projects', icon: 'fa fa-rocket' },
-  { id: 4, name: 'Contact', link: 'contact', icon: 'fa fa-vcard' },
+  { id: 0, name: 'Home', link: '#home', icon: 'fa fa-home' },
+  { id: 1, name: 'About', link: '#about', icon: 'fa fa-user' },
+  { id: 2, name: 'Resume', link: '#resume', icon: 'fa fa-file-text' },
+  { id: 3, name: 'Projects', link: '#projects', icon: 'fa fa-rocket' },
+  { id: 4, name: 'Contact', link: '#contact', icon: 'fa fa-vcard' },
 ]

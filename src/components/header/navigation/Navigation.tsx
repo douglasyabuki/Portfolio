@@ -5,7 +5,7 @@ import MenuButton from './menu-button/MenuButton';
 import { INavigation } from '../../../interfaces/INavigation';
 
 // Hooks
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 // Props destructuring
 interface Props {
@@ -37,6 +37,7 @@ export default function Navigation({ list }: Props) {
 
   // Function to smoothly scroll into the selected link
   const onLinkClick = (link: string) => {
+
     const element = document.getElementById(link);
     element.scrollIntoView({
       behavior: 'smooth',
@@ -52,7 +53,7 @@ export default function Navigation({ list }: Props) {
       key={item.id}
     >
       <i className={`${item.icon} absolute left-0`}></i>
-      <a onClick={() => onLinkClick(item.link)}>{item.name}</a>
+      <a href={item.link} onClick={() => onLinkClick(item.link)}>{item.name}</a>
     </li>
   ));
 

@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div
-      id="home"
+      id="#home"
       className="group h-auto w-auto bg-background-black py-20 px-4 sm:px-7 md:px-8 lg:px-10"
     >
       <div className="custom-bg-1 block items-center rounded-2xl p-2 sm:p-7 md:rounded-2xl md:p-8 lg:flex lg:p-10 shadow-lg shadow-black">

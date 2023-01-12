@@ -10,7 +10,7 @@ import { testimonialList } from './testimonial/testimonial-list/testimonial-list
 export default function About() {
   // Returns the whole About component to MainView.tsx
   return (
-    <div id="about" className="bg-background-div2 px-4 py-20 sm:px-7 md:px-8 lg:px-10">
+    <div id="#about" className="bg-background-div2 px-4 py-20 sm:px-7 md:px-8 lg:px-10">
       <div className="block bg-background-div2">
         {/* p-4 sm:p-7 md:p-8 lg:p-10 xl:p-20 */}
         <AboutDouglas item={aboutInfo}></AboutDouglas>
