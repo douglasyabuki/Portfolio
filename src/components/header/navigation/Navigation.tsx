@@ -35,7 +35,7 @@ export default function Navigation({ list }: Props) {
     clearTimeout(timeout.current);
   };
 
-  //
+  // Function to smoothly scroll into the selected link
   const onLinkClick = (link: string) => {
     const element = document.getElementById(link);
     element.scrollIntoView({
@@ -45,6 +45,7 @@ export default function Navigation({ list }: Props) {
     });
   };
 
+  // Maps the list of links into ready-to-render items
   const mappedLinks = list.map((item) => (
     <li
       className="relative mx-auto flex h-max w-24 columns-2 items-center justify-center gap-2 opacity-50 hover:underline hover:opacity-80"
@@ -55,6 +56,7 @@ export default function Navigation({ list }: Props) {
     </li>
   ));
 
+  // Returns the Navigation menu to Header.tsx
   return (
     <div className="container relative my-auto h-auto w-auto justify-self-end align-middle font-header">
       <ul
