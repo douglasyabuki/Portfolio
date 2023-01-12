@@ -1,6 +1,6 @@
 // Const
-import { navigationList } from './navigation/navigation-list/navigation-list';
-import { socialList } from './social/social-list/social-list';
+import { navigationList } from '../common/navigation-list/navigation-list';
+import { socialList } from '../common/social-list/social-list';
 
 // Components
 import Logo from './logo/Logo';

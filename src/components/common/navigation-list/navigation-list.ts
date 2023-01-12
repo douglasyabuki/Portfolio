@@ -1,5 +1,5 @@
 // Interface
-import { INavigation } from "../../../../interfaces/INavigation"
+import { INavigation } from "../../../interfaces/INavigation";
 
 export const navigationList: INavigation[] = [
   { id: 0, name: 'Home', link: '#home', icon: 'fa fa-home' },
