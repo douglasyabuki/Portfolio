@@ -35,13 +35,23 @@ export default function Navigation({ list }: Props) {
     clearTimeout(timeout.current);
   };
 
+  //
+  const onLinkClick = (link: string) => {
+    const element = document.getElementById(link);
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest',
+    });
+  };
+
   const mappedLinks = list.map((item) => (
     <li
       className="relative mx-auto flex h-max w-24 columns-2 items-center justify-center gap-2 opacity-50 hover:underline hover:opacity-80"
       key={item.id}
     >
       <i className={`${item.icon} absolute left-0`}></i>
-      <a href={item.link}>{item.name}</a>
+      <a onClick={() => onLinkClick(item.link)}>{item.name}</a>
     </li>
   ));
 
