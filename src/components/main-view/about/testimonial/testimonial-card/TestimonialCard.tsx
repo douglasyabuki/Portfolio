@@ -10,10 +10,10 @@ interface Props {
 export default function TestimonialCard({ position, relation, testimonial, href }: Props) {
   // Returns a single testimonial card to Testimonials.tsx
   return (
-    <div className="group container relative h-full w-72 scale-90 rounded-xl bg-background-div1 p-4 text-center shadow-lg shadow-black duration-300 hover:scale-95 sm:p-7 md:p-8 lg:p-10">
-      <div className="container relative flex h-3/5 items-center">
+    <div className="group relative min-w-[300px] h-auto w-72 md:w-96 scale-90 rounded-xl bg-background-div1 p-4 text-center shadow-lg shadow-black duration-300 hover:scale-95 sm:p-7 md:p-8 lg:p-10">
+      <div className="container relative flex items-center h-3/5">
         <i className="fa fa-quote-left absolute left-0 top-0 text-5xl text-purplish-gray opacity-20"></i>
-        <p className="pt-4 text-sm opacity-80">{testimonial}</p>
+        <p className="pt-4 text-base md:text-xl opacity-80 px-2 md:mb-6">{testimonial}</p>
       </div>
       <div className="container items-end">
         <i className="fa fa-user-circle-o m-5 block text-5xl group-hover:hidden"></i>
