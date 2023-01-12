@@ -21,7 +21,6 @@ interface Props {
 
 // About board main function
 export default function AboutBoard({ infoList }: Props) {
-
   // Setting initial states (begins with no section selected)
   const [currentSectionId, setCurrentSectionId] = useState<number | null>(null);
   const [currentSection, setCurrentSection] = useState<IAboutSection>(emptySection);
@@ -49,13 +48,13 @@ export default function AboutBoard({ infoList }: Props) {
           ></AboutBoardSelector>
         ))}
       </div>
-      <div className="custom-bg-2 container relative block w-full rounded-3xl shadow-md shadow-black">
-        {currentSection !== emptySection ? (
+      {currentSection !== emptySection ? (
+        <div className="custom-bg-2 container relative block w-full rounded-3xl shadow-md shadow-black transition-all duration-300">
           <AboutBoardFrame currentSection={currentSection}></AboutBoardFrame>
-        ) : (
-          <></>
-        )}
-      </div>
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

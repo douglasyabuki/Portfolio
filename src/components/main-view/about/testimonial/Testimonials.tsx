@@ -15,11 +15,10 @@ interface Props {
 export default function Testimonials({ list }: Props) {
 
   return (
-    <div className="container justify-center my-12 text-center">
+    <div className="container justify-center mx-auto my-12 text-center">
       <h1 className="mb-8 block h-auto text-3xl font-bold md:text-4xl xl:text-5xl 2xl:text-6xl">
         Testimonials
       </h1>
-
       <TestimonialRow list={list}></TestimonialRow>
     </div>
   );

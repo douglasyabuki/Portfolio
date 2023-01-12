@@ -46,9 +46,9 @@ export default function TestimonialCarousel({ list }: ITestimonialCarouselProps)
 
   return (
     <div className="block w-full">
-      <div className="flex w-full overflow-scroll">
+      <div className="flex  w-full overflow-auto scrollbar-hidden ">
         {list.map((item) => (
-          <div id={`#${item.id}`}>
+          <div className='min-w-full m-auto' id={`#${item.id}`}>
             <TestimonialCard
               key={item.id}
               href={item.href}
