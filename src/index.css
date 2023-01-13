@@ -22,3 +22,14 @@ body,
 .custom-bg-divider-2 {
   background: linear-gradient(4.5deg, #19181f 50%, #1e1b24 50%);
 }
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

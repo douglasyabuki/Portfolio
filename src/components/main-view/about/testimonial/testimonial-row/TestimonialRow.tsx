@@ -45,7 +45,7 @@ export default function TestimonialRow({ list }: ITestimonialRowProps) {
 
   // Returns the row of cards with or without the carousel depending on screen width
   return (
-    <div className="container flex justify-center overflow-x-hidden">
+    <div className="container flex justify-center">
       {requiresCarousel ? (
         <TestimonialCarousel list={list}></TestimonialCarousel>
       ) : (

@@ -20,7 +20,7 @@ export default function TestimonialCarousel({ list }: ITestimonialCarouselProps)
 
   const scrollToCard = (i: number) => {
     setCurrentCard(i);
-    const getReference = document.getElementById(`#${i}`)
+    const getReference = document.getElementById(`#${i}`);
     getReference.scrollIntoView({
       behavior: 'smooth',
       block: 'nearest',
@@ -45,10 +45,10 @@ export default function TestimonialCarousel({ list }: ITestimonialCarouselProps)
   };
 
   return (
-    <div className="block w-full">
-      <div className="flex  w-full overflow-auto scrollbar-hidden ">
+    <div className="group block relative w-full">
+      <div className="scrollbar-hidden flex w-full overflow-scroll">
         {list.map((item) => (
-          <div className='min-w-full m-auto' id={`#${item.id}`}>
+          <div className="m-auto min-w-full" id={`#${item.id}`}>
             <TestimonialCard
               key={item.id}
               href={item.href}
@@ -59,8 +59,10 @@ export default function TestimonialCarousel({ list }: ITestimonialCarouselProps)
           </div>
         ))}
       </div>
-      <button onClick={() => previousCard()}>Previous</button>
-      <button onClick={() => nextCard()}>Next</button>
+      <div className='hidden container absolute justify-between top-0 bottom-0 group-hover:flex'>
+        <button onClick={() => previousCard()}><i className='fa fa-angle-left text-5xl'></i></button>
+        <button onClick={() => nextCard()}><i className='fa fa-angle-right text-5xl'></i></button>
+      </div>
     </div>
   );
 }
