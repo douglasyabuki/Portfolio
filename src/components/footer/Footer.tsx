@@ -1,15 +1,23 @@
 // Components
 import CopyRight from './copyright/Copyright';
+import FooterContact from './footer-contact/FooterContact';
+import FooterNavigation from './footer-navigation/FooterNavigation';
+import FooterSocial from './footer-social/FooterSocial';
+
+// Const
+import { contactList } from '../common/contact-list/contact-list';
+import { navigationList } from '../common/navigation-list/navigation-list';
+import { socialList } from '../common/social-list/social-list';
 
 // Footer main function
 export default function Footer() {
   // Returns the whole footer to App.tsx
   return (
-    <div className="md:h-22 relative min-w-full items-center bg-slate-500 px-8 text-center text-not-so-white text-opacity-80 sm:px-14 md:px-16 md:py-2 lg:px-20 xl:px-32">
-      <div className='flex cols-3 justify-between'>
-        <div className="">b</div>
-        <div className="">c</div>
-        <div className="">d</div>
+    <div className="relative block h-auto min-w-full bg-black px-8 py-4 text-not-so-white sm:px-14 md:px-16 lg:px-20 xl:px-32">
+      <FooterSocial list={socialList}></FooterSocial>
+      <div className="container m-auto space-y-4 lg:flex lg:w-1/3 justify-between py-8">
+        <FooterNavigation list={navigationList}></FooterNavigation>
+        <FooterContact list={contactList}></FooterContact>
       </div>
       <CopyRight></CopyRight>
     </div>
