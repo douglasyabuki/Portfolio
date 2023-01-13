@@ -1,3 +1,4 @@
+// Interface of object About Section on AboutDouglas.tsx
 export interface IAboutSection {
   sectionId: number,
   sectionIcon: string,
