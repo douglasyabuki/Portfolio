@@ -45,10 +45,10 @@ export default function TestimonialCarousel({ list }: ITestimonialCarouselProps)
   };
 
   return (
-    <div className="group block relative w-full">
-      <div className="scrollbar-hidden flex w-full overflow-scroll">
+    <div className="group relative block w-full">
+      <div className="scrollbar-hide flex w-full overflow-scroll">
         {list.map((item) => (
-          <div className="m-auto min-w-full" id={`#${item.id}`}>
+          <div className="m-auto min-w-full flex" id={`#${item.id}`}>
             <TestimonialCard
               key={item.id}
               href={item.href}
@@ -59,9 +59,13 @@ export default function TestimonialCarousel({ list }: ITestimonialCarouselProps)
           </div>
         ))}
       </div>
-      <div className='hidden container absolute justify-between top-0 bottom-0 group-hover:flex'>
-        <button onClick={() => previousCard()}><i className='fa fa-angle-left text-5xl'></i></button>
-        <button onClick={() => nextCard()}><i className='fa fa-angle-right text-5xl'></i></button>
+      <div className="container absolute bottom-0 top-0 hidden justify-between group-hover:flex">
+        <button onClick={() => previousCard()}>
+          <i className="fa fa-angle-left text-5xl"></i>
+        </button>
+        <button onClick={() => nextCard()}>
+          <i className="fa fa-angle-right text-5xl"></i>
+        </button>
       </div>
     </div>
   );

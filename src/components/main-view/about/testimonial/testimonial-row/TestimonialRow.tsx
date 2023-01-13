@@ -49,7 +49,7 @@ export default function TestimonialRow({ list }: ITestimonialRowProps) {
       {requiresCarousel ? (
         <TestimonialCarousel list={list}></TestimonialCarousel>
       ) : (
-        <div className="container flex justify-center gap-3 overflow-x-hidden rounded-xl">
+        <div className="container flex justify-center gap-3 rounded-xl">
           {simpleRow}
         </div>
       )}
