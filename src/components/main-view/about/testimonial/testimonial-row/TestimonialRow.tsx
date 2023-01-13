@@ -5,33 +5,13 @@ import TestimonialCarousel from './testimonial-carousel/TestimonialCarousel';
 // Interfaces
 import { ITestimonial } from '../../../../../interfaces/ITestimonial';
 
-// Hooks
-import { useState, useEffect } from 'react';
-
-// Utils
-import { limitScreenWidth } from '../../../../../utils/limit-screen-width';
-
 // Props destructuring
 interface ITestimonialRowProps {
   list: ITestimonial[];
 }
 
-// Sets initial state based on current screen width
-const initialState = limitScreenWidth();
-
 // Testimonials row main function
 export default function TestimonialRow({ list }: ITestimonialRowProps) {
-  // Setting state
-  const [requiresCarousel, setRequiresCarousel] = useState<boolean>(initialState);
-
-  // Function that checks if a Carousel is needed whenever the screen is resized
-  onresize = () => {
-    let checkNeed = limitScreenWidth();
-    {
-      checkNeed ? setRequiresCarousel(true) : setRequiresCarousel(false);
-    }
-  };
-
   // Function to map the list into cards in a row
   const simpleRow = list.map((item) => (
     <TestimonialCard
@@ -46,13 +26,10 @@ export default function TestimonialRow({ list }: ITestimonialRowProps) {
   // Returns the row of cards with or without the carousel depending on screen width
   return (
     <div className="container flex justify-center">
-      {requiresCarousel ? (
+      <div className="block w-full lg:hidden">
         <TestimonialCarousel list={list}></TestimonialCarousel>
-      ) : (
-        <div className="container flex justify-center gap-3 rounded-xl">
-          {simpleRow}
-        </div>
-      )}
+      </div>
+      <div className="container hidden justify-center gap-3 rounded-xl lg:flex">{simpleRow}</div>
     </div>
   );
 }
