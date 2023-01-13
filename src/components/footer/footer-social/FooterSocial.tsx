@@ -8,7 +8,7 @@ interface Props {
 // Footer Social main function
 export default function FooterSocial({ list }: Props) {
   return (
-    <div className="flex lg:justify-center gap-2">
+    <div className="flex gap-2">
       {list.map((item) => (
         <a
           key={item.id}
