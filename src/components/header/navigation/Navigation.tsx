@@ -7,6 +7,9 @@ import { INavigation } from '../../../interfaces/INavigation';
 // Hooks
 import React, { useRef, useState } from 'react';
 
+// Utils
+import { scrollOnClick } from '../../../utils/scroll-on-click';
+
 // Props destructuring
 interface Props {
   list: INavigation[];
@@ -35,17 +38,6 @@ export default function Navigation({ list }: Props) {
     clearTimeout(timeout.current);
   };
 
-  // Function to smoothly scroll into the selected link
-  const onLinkClick = (link: string) => {
-
-    const element = document.getElementById(link);
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest',
-    });
-  };
-
   // Maps the list of links into ready-to-render items
   const mappedLinks = list.map((item) => (
     <li
@@ -53,7 +45,7 @@ export default function Navigation({ list }: Props) {
       key={item.id}
     >
       <i className={`${item.icon} absolute left-0`}></i>
-      <a href={item.link} onClick={() => onLinkClick(item.link)}>{item.name}</a>
+      <a href={item.link} onClick={() => scrollOnClick(item.link)}>{item.name}</a>
     </li>
   ));
 
