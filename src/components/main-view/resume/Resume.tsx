@@ -9,6 +9,7 @@ import { educationImgList } from './education/education-img-board/education-img-
 import { idiomList } from './idioms/idiom-list/idiom-list';
 import { skillList } from './skills/skill-list/skill-list';
 
+// Resume main function
 export default function Resume() {
   return (
     <div
