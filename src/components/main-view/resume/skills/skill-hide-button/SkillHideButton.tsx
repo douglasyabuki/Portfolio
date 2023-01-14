@@ -19,7 +19,7 @@ export default function SkillHideButton({ isActive, setIsActive }: Props) {
 
   // Returns interactive button to Skills.tsx
   return (
-    <div className="relative m-auto flex h-12 w-12 items-center justify-center rounded-xl bg-background-div1 shadow-md shadow-black transition-all duration-300 hover:shadow-lg hover:shadow-black md:h-20 md:w-20">
+    <div className="relative m-auto flex h-12 w-12 items-center justify-center rounded-xl bg-background-div1 shadow-md shadow-translucid-black transition-all duration-300 hover:shadow-lg hover:shadow-translucid-black md:h-20 md:w-20">
       <i
         role={'button'}
         onClick={useEyeDropper}

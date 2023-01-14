@@ -20,7 +20,7 @@ export default function AboutBoardFrame({ currentSection }: Props) {
           {currentSection.sectionContent}
         </h2>
       </div>
-      <div className="container h-auto justify-center rounded-3xl px-2 sm:px-4 md:px-8 lg:absolute lg:-right-4 lg:-bottom-36 lg:w-80 lg:p-0 lg:shadow-xl lg:shadow-black xl:w-96 2xl:-bottom-16 2xl:w-[28rem] 3xl:-bottom-40 3xl:w-[36rem]">
+      <div className="container h-auto justify-center rounded-3xl px-2 sm:px-4 md:px-8 lg:absolute lg:-right-4 lg:-bottom-36 lg:w-80 lg:p-0 lg:shadow-xl lg:shadow-translucid-black xl:w-96 2xl:-bottom-16 2xl:w-[28rem] 3xl:-bottom-40 3xl:w-[36rem]">
         <img
           src={currentSection.sectionImage}
           alt={currentSection.sectionImageAlt}

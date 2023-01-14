@@ -11,7 +11,7 @@ export default function SkillCard({ item }: Props) {
 
   // Returns a single card to Skills.tsx
   return (
-    <div className="group container flex h-20 w-20 scale-100 items-center justify-center rounded-xl bg-background-div1 shadow-md shadow-black transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-black xs:h-24 xs:w-24 md:h-40 md:w-40">
+    <div className="group container flex h-20 w-20 scale-100 items-center justify-center rounded-xl bg-background-div1 shadow-md shadow-translucid-black transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-translucid-black xs:h-24 xs:w-24 md:h-40 md:w-40">
       <div className="block">
         <a className="h-auto w-auto" href={item.skillUrl}>
           {item.skillImg ? (

@@ -49,7 +49,7 @@ export default function AboutBoard({ infoList }: Props) {
         ))}
       </div>
       {currentSection !== emptySection ? (
-        <div className="custom-bg-2 container relative block w-full rounded-3xl shadow-md shadow-black transition-all duration-300">
+        <div className="custom-bg-2 container relative block w-full rounded-3xl shadow-md shadow-translucid-black transition-all duration-300">
           <AboutBoardFrame currentSection={currentSection}></AboutBoardFrame>
         </div>
       ) : (

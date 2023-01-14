@@ -16,8 +16,6 @@ export default function Resume() {
     >
       <Education list={educationList} imgList={educationImgList}></Education>
       <Skills list={skillList}></Skills>
-
-      <div className="rounded-xl bg-red-900 px-4 sm:px-7 md:px-8 lg:px-10"></div>
     </div>
   );
 }

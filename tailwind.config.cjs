@@ -18,7 +18,8 @@ module.exports = {
       },
       colors: {
         'background-black': ' #19181F',
-        'background-transparent-black': ' #19181F80',
+        'transparent-black': ' #19181F80',
+        'translucid-black' : '#000000d9',
         'background-div1': '#23202A',
         'background-div2': '#1E1B24',
         'purplish-gray': '#C2C6DD',

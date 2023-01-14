@@ -32,8 +32,8 @@ export default function AboutBoardSelector({ icon, title, id, currentId, onClick
       onClick={onClickHandler}
       className={
         isActive
-          ? `group container relative mx-auto my-5 flex w-36 rounded-full bg-not-so-white text-left align-middle font-bold text-black shadow-lg shadow-black transition-all duration-300 lg:w-44`
-          : `group container relative mx-auto my-5 flex w-36 rounded-full text-left align-middle shadow-md shadow-black transition-all duration-300 hover:bg-not-so-white hover:text-black lg:w-44 lg:bg-background-div1`
+          ? `group container relative mx-auto my-5 flex w-36 rounded-full bg-not-so-white text-left align-middle font-bold text-black shadow-lg shadow-translucid-black transition-all duration-300 lg:w-44`
+          : `group container relative mx-auto my-5 flex w-36 rounded-full text-left align-middle shadow-md shadow-translucid-black transition-all duration-300 hover:bg-not-so-white hover:text-black lg:w-44 lg:bg-background-div1`
       }
     >
       <i
