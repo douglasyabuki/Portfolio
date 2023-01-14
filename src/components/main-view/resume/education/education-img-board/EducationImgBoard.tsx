@@ -14,7 +14,7 @@ export default function EducationImgBoard({ list }: Props) {
     <div className="grid-parent">
       {list.map((item) => (
         <div className={`grid-div${item.id+1} flex`}>
-          <img className='cover rounded-xl shadow-sm shadow-black hover:scale-105 hover:shadow-md hover:shadow-black' src={item.src} alt={item.alt} />
+          <img className='cover rounded-xl shadow-sm shadow-black hover:scale-105 hover:shadow-md hover:shadow-black transition-transform duration-200 ease-in' src={item.src} alt={item.alt} />
         </div>
       ))}
     </div>
