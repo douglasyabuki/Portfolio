@@ -3,6 +3,8 @@ export interface ISkill {
   id: number,
   skillName: string,
   skillIcon: string,
+  skillImg?: string,
+  skillImgAlt?: string,
   skillUrl: string,
   learning: boolean
 }
