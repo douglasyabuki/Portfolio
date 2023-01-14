@@ -25,11 +25,29 @@ body,
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
 .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+}
+
+.grid-div1 {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.grid-div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.grid-div3 {
+  grid-area: 2 / 2 / 3 / 3;
 }
