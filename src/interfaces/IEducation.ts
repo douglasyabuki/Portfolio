@@ -5,5 +5,6 @@ export interface IEducation {
   degree: string,
   category: string,
   icon: string,
+  href?: string,
   current: boolean,
 }
