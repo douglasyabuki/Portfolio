@@ -9,7 +9,7 @@ interface Props {
 export default function EducationCard({ item }: Props) {
   return (
     <div
-      className={`group container flex h-auto min-h-[140px] scale-90 transform rounded-xl p-4 bg-background-div1 shadow-md shadow-black duration-300 hover:scale-100 lg:min-h-[110px] 2xl:min-h-[165px] lg:p-2 xl:p-4 ${
+      className={`group container flex h-auto min-h-[140px] scale-90 transform rounded-xl p-4 bg-background-div1 shadow-md shadow-black duration-300 hover:scale-100 hover:shadow-lg hover:shadow-black lg:min-h-[110px] 2xl:min-h-[165px] lg:p-2 xl:p-4 ${
         item.id === 1 ? 'ml-4 md:ml-8 xl:ml-12' : 'ml-0'
       }`}
     >
