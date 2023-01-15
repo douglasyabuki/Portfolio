@@ -4,8 +4,10 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'outer': '0px 5px 10px 0px rgba(0,255,255,0.7);',
-        'outer-hover': '0px 10px 20px 2px rgba(0,255,255,0.7);',
+        'outer': '0px 5px 10px 0px rgba(255,255,255,0.7);',
+        'outer-hover': '0px 10px 20px 2px rgba(255,255,255,0.7);',
+        'inner1':'inset 0 5px 10px 0 rgba(255,0,0,0.7)',
+        'inner1-hover':'inset 0 10px 20px 2px rgba(255,0,0,0.7)',
         'inner2': 'inset 0 5px 10px 0 rgba(0,255,255,0.7);',
         'inner2-hover' : 'inset 0px 10px 20px 2px rgba(0,255,255,0.7);'
       },
@@ -25,6 +27,9 @@ module.exports = {
       colors: {
         'background-black': ' #19181F',
         'transparent-black': ' #19181F80',
+        'transparent-white' : '#ffffffbf',
+        'transparent-red' : '#960000b3',
+        'transparent-green': '#00ffffb3',
         'translucid-black' : '#0000005e',
         'background-div1': '#23202A',
         'background-div2': '#1E1B24',
