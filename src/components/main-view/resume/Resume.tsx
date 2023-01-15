@@ -7,9 +7,12 @@ import Skills from './skills/Skills';
 import { educationList } from './education/education-list/education-list';
 import { educationImgList } from './education/education-img-board/education-img-list/education-img-list';
 import { skillList } from './skills/skill-list/skill-list';
+import { resumeList } from './downloadable-resume/resume-chooser/resume-list/resume-list';
 
 // Resume main function
 export default function Resume() {
+
+  // Returns the whole Resume section to Main View
   return (
     <div
       id="#resume"
@@ -17,7 +20,7 @@ export default function Resume() {
     >
       <Education list={educationList} imgList={educationImgList}></Education>
       <Skills list={skillList}></Skills>
-      <DownloadableResume></DownloadableResume>
+      <DownloadableResume list={resumeList}></DownloadableResume>
     </div>
   );
 }
