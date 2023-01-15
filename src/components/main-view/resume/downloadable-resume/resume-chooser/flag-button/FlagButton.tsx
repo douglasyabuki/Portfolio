@@ -32,8 +32,8 @@ export default function FlagButton({ item, currentLanguage, setCurrentLanguage }
       role={'button'}
       onClick={onClickHandler}
       className={`${
-        isActive ? 'shadow-lg' : 'shadow-md'
-      } hover:shadow-not-so-white hover:shadow-sm flex h-20 w-auto items-center justify-center gap-2 rounded-xl p-2 shadow-translucid-black transition-all duration-300`}
+        isActive ? 'shadow-outer' : 'shadow-md shadow-translucid-black'
+      } hover:shadow-outer-hover flex h-20 w-auto items-center justify-center gap-2 rounded-xl p-2 transition-all duration-300`}
     >
       <img
         className={`${
