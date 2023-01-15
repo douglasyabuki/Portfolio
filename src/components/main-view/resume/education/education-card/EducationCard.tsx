@@ -1,12 +1,18 @@
 // Interface
 import { IEducation } from '../../../../../interfaces/IEducation';
 
+// Utils
+import { scrollOnClick } from '../../../../../utils/scroll-on-click';
+
 // Props destructuring
 interface Props {
   item: IEducation;
 }
 
+// Education card main function
 export default function EducationCard({ item }: Props) {
+
+  // Renders a single card to Education.tsx
   return (
     <div
       className={`group container flex h-auto min-h-[140px] scale-90 transform rounded-xl p-4 bg-background-div1 shadow-md shadow-translucid-black duration-300 hover:scale-100 hover:shadow-lg hover:shadow-translucid-black lg:min-h-[110px] 2xl:min-h-[165px] lg:p-2 xl:p-4 ${
@@ -33,7 +39,7 @@ export default function EducationCard({ item }: Props) {
             {item.current ? 'Current' : 'Concluded'}
           </h3>
         </div>
-        <h4 className="xl:text-lg 2xl:text-2xl">{`${item.category} in ${item.degree}`}</h4>
+        {item.href ? <h4 className="xl:text-lg 2xl:text-2xl">{`${item.category} in `}<a className='group-hover:underline' href={item.href} onClick={() => scrollOnClick(item.href)}>{item.degree}</a></h4> : <h4 className="xl:text-lg 2xl:text-2xl">{`${item.category} in ${item.degree}`}</h4>}
       </div>
     </div>
   );
