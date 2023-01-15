@@ -1,4 +1,5 @@
 // Components
+import DownloadableResume from './downloadable-resume/DownloadableResume';
 import Education from './education/Education';
 import Skills from './skills/Skills';
 
@@ -16,6 +17,7 @@ export default function Resume() {
     >
       <Education list={educationList} imgList={educationImgList}></Education>
       <Skills list={skillList}></Skills>
+      <DownloadableResume></DownloadableResume>
     </div>
   );
 }
