@@ -15,7 +15,6 @@ interface ITestimonialCarouselProps {
 export default function TestimonialCarousel({ list }: ITestimonialCarouselProps) {
   const [currentCard, setCurrentCard] = useState<number>(0);
 
-  const references = useRef(null);
   const totalCards = list.length;
 
   const scrollToCard = (i: number) => {
@@ -48,9 +47,8 @@ export default function TestimonialCarousel({ list }: ITestimonialCarouselProps)
     <div className="relative block w-full">
       <div className="scrollbar-hide flex w-full overflow-scroll">
         {list.map((item) => (
-          <div className="m-auto min-w-full flex" id={`#${item.id}`}>
+          <div key={item.id} className="m-auto min-w-full flex" id={`#${item.id}`}>
             <TestimonialCard
-              key={item.id}
               href={item.href}
               position={item.position}
               relation={item.relation}

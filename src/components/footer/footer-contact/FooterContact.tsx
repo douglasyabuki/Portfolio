@@ -16,10 +16,9 @@ export default function FooterContact({ list }: Props) {
         Get in touch
       </h1>
       {list.map((item) => (
-        <div className="text-left text-sm lg:text-lg">
+        <div key={item.id} className="text-left text-sm lg:text-lg">
           <a
             href={item.href}
-            key={item.id}
             className="text-not-so-white text-opacity-50 transition-all duration-200 ease-in-out hover:text-opacity-80 hover:underline"
           >
             {item.content}
