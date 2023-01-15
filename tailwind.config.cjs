@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'inner2': 'inset 0 20px 40px 0 rgb(0 0 0 / 0.05);',
+        'outer': '0px 5px 10px 0px rgba(0,255,255,0.7);',
+        'outer-hover': '0px 10px 20px 2px rgba(0,255,255,0.7);',
+        'inner2': 'inset 0 5px 10px 0 rgba(0,255,255,0.7);',
+        'inner2-hover' : 'inset 0px 10px 20px 2px rgba(0,255,255,0.7);'
       },
       screens: {
         'xs': '480px',
