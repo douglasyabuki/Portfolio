@@ -21,10 +21,12 @@ export default function FlagButton({ item, currentLanguage, setCurrentLanguage }
     setCurrentLanguage(item.id);
   };
 
+  // Triggers a state verification and update based on current language set by user
   useEffect(() => {
     currentLanguage === item.id ? setIsActive(true) : setIsActive(false);
   }, [currentLanguage]);
 
+  // Returns flag buttons to ResumeChooser.tsx
   return (
     <div
       role={'button'}
