@@ -2,10 +2,8 @@
 import { IForm } from '../../../../interfaces/IForm';
 
 // Components
-import Input from './input/Input';
+import Form from './form/Form';
 
-// Hooks
-import { useReducer } from 'react';
 
 interface Props {}
 
@@ -19,7 +17,7 @@ export default function ContactForm() {
         Leave a message
       </h1>
       <div className="m-auto block px-4 text-center">
-
+        <Form></Form>
       </div>
     </div>
   );
