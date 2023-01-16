@@ -1,6 +1,3 @@
-// Interfaces
-import { IForm } from '../../../../interfaces/IForm';
-
 // Components
 import Form from './form/Form';
 
@@ -16,7 +13,7 @@ export default function ContactForm() {
       <h1 className="w-auto text-3xl font-bold md:text-4xl xl:text-5xl 2xl:text-6xl">
         Leave a message
       </h1>
-      <div className="m-auto block px-4 text-center">
+      <div className="m-auto block items-center justify-center">
         <Form></Form>
       </div>
     </div>
