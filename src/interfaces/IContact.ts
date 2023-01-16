@@ -5,4 +5,6 @@ export interface IContact {
   content: string,
   icon:string,
   href:string,
+  routing?: boolean,
+  newPage?: boolean
 }
