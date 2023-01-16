@@ -1,5 +1,5 @@
 // Interfaces
-import { IContact } from '../../../../../interfaces/IContact';
+import { IContact } from '../../../../interfaces/IContact';
 
 // Components
 import ContactCard from './contact-card/ContactCard';

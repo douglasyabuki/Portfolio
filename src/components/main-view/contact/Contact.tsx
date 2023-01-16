@@ -1,5 +1,5 @@
 // Components
-import Contacts from "./contact-form/contacts/Contacts";
+import Contacts from "./contacts/Contacts";
 import ContactForm from "./contact-form/ContactForm";
 
 // Const

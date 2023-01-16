@@ -1,8 +1,8 @@
 // Interface
-import { IContact } from '../../../../../../interfaces/IContact';
+import { IContact } from '../../../../../interfaces/IContact';
 
 // Utils
-import { scrollOnClick } from '../../../../../../utils/scroll-on-click';
+import { scrollOnClick } from '../../../../../utils/scroll-on-click';
 
 // Props destructuring
 interface Props {
