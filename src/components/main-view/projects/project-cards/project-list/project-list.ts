@@ -1,0 +1,66 @@
+// Interface
+import { IProject } from "../../../../../interfaces/IProject"
+
+// Exports the list of projects to Projects.tsx
+export const projectList: IProject[] = [
+  {
+    id: 0,
+    name: 'Portfolio',
+    description: 'A portfolio website made with React + TypeScript + Tailwind made with Vite and deployed on Vercel',
+    imageSrc: '/proj-portfolio.jpg',
+    imageAlt: 'Screenshot of my portfolio project',
+    url: 'https://portfolio-douglasyabuki.vercel.app/',
+    gitUrl: 'https://github.com/douglasyabuki/portfolio',
+    techs: ['HTML5','Tailwind','TypeScript','React','Vite'],
+  },
+  {
+    id: 1,
+    name: 'Netflix Clone',
+    description: "Legally cloning Netflix's website with React + TypeScript + Tailwind on Vite. Consuming API from themoviedb.org.",
+    imageSrc: '/proj-netflix.jpg',
+    imageAlt: 'Screenshot of my netflix cloning project',
+    url: 'https://netflix-clone-pq9zd92oa-douglasyabuki.vercel.app/',
+    gitUrl: 'https://github.com/douglasyabuki/netflix-clone',
+    techs: ['HTML5','Tailwind','TypeScript','React','Vite'],
+  },
+  {
+    id: 2,
+    name: 'Sudoku Solver',
+    description: "React + TypeScript sudoku solver app using Next.js. Fetches data from own API.",
+    imageSrc: '/proj-sudoku.jpg',
+    imageAlt: 'Screenshot of my sudoku-solver project',
+    url: 'https://my-sudoku-solver-douglasyabuki.vercel.app/',
+    gitUrl: 'https://github.com/douglasyabuki/my-sudoku-solver',
+    techs: ['HTML5','CSS3','TypeScript','React','NextJS'],
+  },
+  {
+    id: 3,
+    name: 'Memory Game',
+    description: "A React + TypeScript memory game using Vite.",
+    imageSrc: '/proj-memory.jpg',
+    imageAlt: 'Screenshot of my memory game project',
+    url: 'https://react-memory-game-douglasyabuki.vercel.app/',
+    gitUrl: 'https://github.com/douglasyabuki/react-memory-game',
+    techs: ['HTML5','CSS3','TypeScript','React','Vite'],
+  },
+  {
+    id: 4,
+    name: 'Tic-tac-toe',
+    description: "A simple React + TypeScript Tic-Tac-Toe game using Vite.",
+    imageSrc: '/proj-tic.jpg',
+    imageAlt: 'Screenshot of my Tic Tac Toe project',
+    url: 'https://react-tic-tac-toe-douglasyabuki.vercel.app/',
+    gitUrl: 'https://github.com/douglasyabuki/react-tic-tac-toe',
+    techs: ['HTML5','CSS3','TypeScript','React','Vite'],
+  },
+  {
+    id: 5,
+    name: 'Rock-Paper-Scissors-Lizard-Spock',
+    description: "Game suggested by Sheldon (Big Bang Theory) built in Angular.",
+    imageSrc: '/proj-rock.jpg',
+    imageAlt: 'Screenshot of my memory game project',
+    url: 'https://douglasyabuki.github.io/rock-paper-scissors/',
+    gitUrl: 'https://github.com/douglasyabuki/rock-paper-scissors',
+    techs: ['HTML5','CSS3','TypeScript','Angular'],
+  },
+]
