@@ -11,6 +11,16 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.shaped-div1 {
+  -webkit-clip-path: polygon(25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0% 25%);
+  clip-path: polygon(25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0% 25%);
+}
+
+.shaped-div2 {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
 .custom-bg-1 {
   background: linear-gradient(110deg, #23202a 60%, #1e1b24 60%);
 }
