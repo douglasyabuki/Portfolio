@@ -11,10 +11,12 @@ interface Props {
 
 // Contact card main function
 export default function ContactCard({ item }: Props) {
-
   // Returns a single interactive contact card to Contacts.tsx
   return (
-    <div
+    <a
+      href={item.href}
+      onClick={item.routing ? () => scrollOnClick(item.href) : null}
+      target={item.newPage ? '_blank' : '_self'}
       className={`group container flex h-auto min-h-[140px] scale-90 transform rounded-xl bg-background-div1 p-4 shadow-md shadow-translucid-black duration-300 hover:scale-100 hover:shadow-lg hover:shadow-translucid-black lg:min-h-[110px] lg:p-2 xl:p-4 2xl:min-h-[165px] ${
         item.id === 1 ? 'ml-4 md:ml-8 xl:ml-12' : 'ml-0'
       }`}
@@ -29,14 +31,8 @@ export default function ContactCard({ item }: Props) {
             {item.name}
           </h2>
         </div>
-        <a
-          href={item.href}
-          onClick={item.routing ? () => scrollOnClick(item.href) : null}
-          target={item.newPage ? '_blank' : '_self'}
-        >
-          <h4 className="xl:text-lg 2xl:text-2xl">{`${item.content}`}</h4>
-        </a>
+        <h4 className="xl:text-lg 2xl:text-2xl">{`${item.content}`}</h4>
       </div>
-    </div>
+    </a>
   );
 }
