@@ -20,7 +20,11 @@ export default function Contacts({ list }: Props) {
           ))}
         </div>
         <div className="container ">
-          <img className='cover rounded-xl shadow-sm shadow-translucid-black hover:scale-105 hover:shadow-md hover:shadow-translucid-black transition-transform duration-200 ease-in' src="/contact.jpg" alt="Photo by Gilles Lambert on Unsplash" />
+          <img
+            className="cover rounded-xl shadow-sm shadow-translucid-black transition-transform duration-200 ease-in hover:scale-105 hover:shadow-md hover:shadow-translucid-black"
+            src="/contact.jpg"
+            alt="Photo by Gilles Lambert on Unsplash"
+          />
         </div>
       </div>
     </div>
