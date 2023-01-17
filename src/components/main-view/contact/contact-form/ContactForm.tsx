@@ -1,9 +1,6 @@
 // Components
 import Form from './form/Form';
 
-
-interface Props {}
-
 export default function ContactForm() {
   return (
     <div

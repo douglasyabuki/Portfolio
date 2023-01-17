@@ -6,10 +6,11 @@ export interface IFormState {
   nameError: string;
   emailError: string;
   messageError: string;
+  isSent: boolean;
 }
 
 // Exports the interface of useReducer actions to Form.tsx
 export interface IFormAction {
-  type: 'updateName' | 'updateEmail' | 'updateMessage' | 'validate';
+  type: 'updateName' | 'updateEmail' | 'updateMessage' | 'validate' | 'updateIsSent';
   value?: string;
 }
