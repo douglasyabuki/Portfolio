@@ -22,14 +22,12 @@ export default function ProjectCard({ item }: Props) {
 
   // Returns a single card to be rendered by ProjectCards.tsx
   return (
-    <div className="container relative m-auto h-auto w-fit flex-col items-center justify-between bg-background-div1 rounded-xl">
-      <h1 className='mb-2 text-center text-xl font-bold md:text-2xl xl:mb-4 xl:text-3xl 2xl:text-4xl'>{item.name}</h1>
-      <div className="flex">
-        <img className="cover shaped-div1" src={item.imageSrc} alt={item.imageAlt} />
+    <div className="container relative m-auto h-[700px] w-[450px] flex-col items-center justify-between rounded-3xl bg-background-div1 text-center shadow-lg shadow-translucid-black py-12">
+      <h2 className="text-2xl">{item.name}</h2>
+      <h3 className="text-xl opacity-60 px-12">{item.description}</h3>
+      <div className="shaped-ruppee relative h-auto w-auto translate-x-4 translate-y-4 shadow-2xl shadow-translucid-black">
+        <img src={item.imageSrc} alt={item.imageAlt} className="cover" />
       </div>
-        <div className="z-40 h-96 rounded-xl">
-          <h2>{item.description}</h2>
-        </div>
     </div>
   );
 }

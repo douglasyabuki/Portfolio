@@ -45,7 +45,7 @@ export const projectList: IProject[] = [
   },
   {
     id: 4,
-    name: 'Tic-tac-toe',
+    name: 'Tic tac toe',
     description: "A simple React + TypeScript Tic-Tac-Toe game using Vite.",
     imageSrc: '/proj-tic.jpg',
     imageAlt: 'Screenshot of my Tic Tac Toe project',
@@ -55,7 +55,7 @@ export const projectList: IProject[] = [
   },
   {
     id: 5,
-    name: 'Rock-Paper-Scissors-Lizard-Spock',
+    name: 'Rock Paper Scissors Lizard & Spock',
     description: "Game suggested by Sheldon (Big Bang Theory) built in Angular.",
     imageSrc: '/proj-rock.jpg',
     imageAlt: 'Screenshot of my memory game project',
