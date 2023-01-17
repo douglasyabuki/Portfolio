@@ -12,6 +12,7 @@ import React, { useRef, useReducer, useEffect } from 'react';
 // Libraries
 import emailjs from '@emailjs/browser';
 
+// Reducing functions to better organization and
 function reducer(state: IFormState, action: IFormAction): IFormState {
   switch (action.type) {
     case 'updateName':
@@ -34,7 +35,10 @@ function reducer(state: IFormState, action: IFormAction): IFormState {
   }
 }
 
+// Form main function
 export default function Form() {
+
+  // Setting initial states
   const [state, dispatch] = useReducer(reducer, {
     user_name: '',
     user_email: '',
@@ -45,8 +49,10 @@ export default function Form() {
     isSent: false,
   });
 
+  // This function is required by emailJS
   const form = useRef();
 
+  // Function to the form as e-mail through emailJS
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     emailjs.sendForm('service_33hll7y', 'template_5ayyk7u', form.current, 'sPdg6uR18LiOuNKHP').then(
@@ -60,10 +66,12 @@ export default function Form() {
     );
   };
 
+  // Triggers a validation whenever there is a change on input fields
   useEffect(() => {
     dispatch({ type: 'validate' });
   }, [state.user_name, state.user_email, state.message]);
 
+  // Returns the complete form to ContactForm.tsx
   return (
     <div className="relative overflow-x-hidden">
       <div

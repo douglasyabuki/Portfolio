@@ -10,6 +10,7 @@ interface Props {
 
 // Input main function
 export default function Input({ name, type, label, value, onChange }: Props) {
+
   // Returns the componentized input field to ContactForm.tsx
   return (
     <div className="m-auto w-fit flex-col">

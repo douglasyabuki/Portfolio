@@ -1,7 +1,10 @@
 // Components
 import Form from './form/Form';
 
+// Contact Form main function
 export default function ContactForm() {
+
+  // Returns the Form with its title and frame to Contact.tsx
   return (
     <div
       id="#contact-form"
