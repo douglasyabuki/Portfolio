@@ -7,6 +7,10 @@ body,
   display: flex;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .custom-bg-1 {
   background: linear-gradient(110deg, #23202a 60%, #1e1b24 60%);
 }
