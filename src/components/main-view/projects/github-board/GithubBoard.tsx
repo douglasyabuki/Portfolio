@@ -9,7 +9,7 @@ export default function GithubBoard() {
         Want to see more? Visit his Github profile.
       </h2>
       <a
-        href="#projects"
+        href="https://github.com/douglas-yabuki"
         target={'_blank'}
         className="group container relative m-auto flex h-fit w-fit items-center justify-center rounded-full bg-transparent-black shadow-lg shadow-translucid-black transition-all duration-300 hover:shadow-2xl hover:shadow-transparent-red"
       >
