@@ -5,7 +5,10 @@ interface Props {
   alt: string
 }
 
+// Card image frame main function
 export default function CardImageFrame ({isExtended, src, alt}: Props) {
+
+  // Returns the styled image container used by ProjectCard.tsx
   return (
     <div
     className={`${
