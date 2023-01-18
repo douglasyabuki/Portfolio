@@ -17,7 +17,7 @@ export default function CardLinksFrame({ gitUrl, projectUrl, isExtended }: Props
     >
       <a href={gitUrl} target='_blank'>
         <i
-          className={`fa fa-github flex h-12 w-12 items-center justify-center  rounded-full bg-background-div2 text-4xl opacity-80 transition-opacity duration-300 ease-in-out hover:opacity-100`}
+          className={`fa fa-code flex h-12 w-12 items-center justify-center  rounded-full bg-background-div2 text-4xl opacity-80 transition-opacity duration-300 ease-in-out hover:opacity-100`}
         ></i>
       </a>
       <a href={projectUrl} target='_blank'>
