@@ -2,11 +2,15 @@
 import { IProject } from '../../../../../interfaces/IProject';
 import { ISkill } from '../../../../../interfaces/ISkill';
 
-// Hooks
-import { useState } from 'react';
+// Components
+import CardImageFrame from './card-image-frame/CardImageFrame';
+import LinksFrame from './links-frame/LinksFrame';
 
 // Const
 import { skillList } from '../../../resume/skills/skill-list/skill-list';
+
+// Hooks
+import { useState } from 'react';
 
 // Props destructuring
 interface Props {
@@ -37,11 +41,11 @@ export default function ProjectCard({ item }: Props) {
       onClick={onClickHandler}
       className={`${
         isExtended
-          ? `cursor-default hover:shadow-outer`
-          : `hover:scale-100 hover:shadow-lg hover:shadow-translucid-black ${
-              item.id % 2 !== 0 ? `lg:translate-x-20` : `-translate-x-20`
+          ? `cursor-default hover:shadow-outer ${item.id % 2 === 0 ? `custom-bg-1` : `custom-bg-2`}`
+          : `bg-background-div1 hover:-translate-y-5 hover:shadow-lg hover:shadow-translucid-black ${
+              item.id % 2 !== 0 ? `lg:translate-x-20` : `lg:-translate-x-20`
             } `
-      } group container block h-auto w-auto scale-90 transform space-y-8 rounded-xl bg-background-div1 p-4 py-12 shadow-md shadow-translucid-black transition-all duration-300  xs:p-6 xs:py-16 md:rounded-3xl md:p-12 lg:m-auto lg:flex lg:min-h-[350px] lg:w-fit lg:space-y-0 lg:p-8 xl:p-12`}
+      } group container block h-auto w-auto transform space-y-8 rounded-xl  p-4 py-12 shadow-md shadow-translucid-black transition-all duration-300  xs:p-6 xs:py-16 md:rounded-3xl md:p-12 lg:m-auto lg:flex lg:min-h-[350px] lg:w-fit lg:space-y-0 lg:p-8 xl:p-12`}
     >
       <div
         className={`${
@@ -74,29 +78,8 @@ export default function ProjectCard({ item }: Props) {
           {item.description}
         </h3>
       </div>
-      <div
-        className={`${
-          isExtended ? `scale-100` : `h-0 scale-0 lg:h-auto lg:w-0`
-        } shaped-ruppee w-auto transition-all duration-300 hover:-translate-y-5 lg:h-max`}
-      >
-        <img className={`cover`} src={item.imageSrc} alt={item.imageAlt} />
-      </div>
-      <div
-        className={`${
-          isExtended ? `scale-100 lg:pl-2 xl:pl-4` : `h-0 scale-0 lg:h-auto lg:w-0`
-        } flex w-auto items-center justify-center space-x-4 transition-all duration-300 lg:block lg:h-max lg:self-center`}
-      >
-        <a href={item.gitUrl} target={'_blank'}>
-          <i
-            className={`fa fa-github flex h-12 w-12 items-center justify-center  rounded-full bg-background-div2 text-4xl opacity-80 transition-opacity duration-300 ease-in-out hover:opacity-100`}
-          ></i>
-        </a>
-        <a href={item.url}>
-          <i
-            className={`fa fa-chain flex h-12 w-12  items-center justify-center rounded-full bg-background-div2 text-4xl opacity-80 transition-opacity duration-300 ease-in-out hover:opacity-100`}
-          ></i>
-        </a>
-      </div>
+      <CardImageFrame isExtended={isExtended} src={item.imageSrc} alt={item.imageAlt}></CardImageFrame>
+      <LinksFrame isExtended={isExtended} gitUrl={item.gitUrl} projectUrl={item.url}></LinksFrame>
     </div>
   );
 }
