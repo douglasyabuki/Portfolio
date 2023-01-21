@@ -30,20 +30,16 @@ export default function AboutBoardSelector({ icon, title, id, currentId, onClick
     <div
       role={'button'}
       onClick={onClickHandler}
-      className={
-        isActive
-          ? `group container relative mx-auto my-5 flex w-36 rounded-full bg-not-so-white text-left align-middle font-bold text-black shadow-lg shadow-translucid-black transition-all duration-300 lg:w-44`
-          : `group container relative mx-auto my-5 flex w-36 rounded-full text-left align-middle shadow-md shadow-translucid-black transition-all duration-300 hover:bg-not-so-white hover:text-black lg:w-44 lg:bg-background-div1`
-      }
+      className={`${isActive ? `opacity-100` : `opacity-80`} flex items-center justify-center space-x-6`}
     >
       <i
         className={
           isActive
-            ? `${icon} flex w-6 animate-spin items-center justify-center xs:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl`
-            : `${icon} flex w-6 items-center justify-center group-hover:animate-spin xs:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl`
+            ? `${icon} w-min animate-spin text-xl md:text-xl 2xl:text-2xl 3xl:text-3xl`
+            : `${icon} w-min group-hover:animate-spin text-xl md:text-xl 2xl:text-2xl 3xl:text-3xl`
         }
       ></i>
-      <h1 className="ml-3 h-auto w-min px-2 font-sans text-xl lg:text-2xl">{title}</h1>
+      <h1 className={`${currentId !== null ? `scale-0 w-0 lg:scale-100 lg:w-32`: `scale-100 w-28 lg:w-32`} text-left h-auto font-sans text-xl lg:text-2xl transition-transform duration-300`}>{title}</h1>
     </div>
   );
 }

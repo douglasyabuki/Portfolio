@@ -8,7 +8,6 @@ interface Props {
 
 // About board frame main function
 export default function AboutBoardFrame({ currentSection }: Props) {
-
   // Returns the current section information rendered to AboutBoard.tsx
   return (
     <div className="relative h-full rounded-xl py-5 text-center lg:text-left">
@@ -16,7 +15,7 @@ export default function AboutBoardFrame({ currentSection }: Props) {
         <h1 className="mb-4 text-3xl font-bold md:text-4xl xl:text-5xl 2xl:text-5xl">
           {currentSection.sectionTitle}
         </h1>
-        <h2 className="py-4 text-xl opacity-80 xs:py-8 md:text-2xl xl:py-12 2xl:py-16 3xl:text-4xl">
+        <h2 className="py-4 text-base opacity-80 xs:py-8 xs:text-lg md:text-2xl xl:py-12 2xl:py-16 3xl:text-4xl">
           {currentSection.sectionContent}
         </h2>
       </div>
