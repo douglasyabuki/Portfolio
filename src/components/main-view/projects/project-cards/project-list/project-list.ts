@@ -55,6 +55,16 @@ export const projectList: IProject[] = [
   },
   {
     id: 5,
+    name: 'Todo list',
+    description: "The classic todo list using React + TypeScript and Vite.",
+    imageSrc: '/proj-todo.jpg',
+    imageAlt: 'Screenshot of my todo list project',
+    url: 'https://todo-list-douglasyabuki.vercel.app/',
+    gitUrl: 'https://github.com/douglasyabuki/todo-list',
+    techs: ['HTML5','CSS3','TypeScript','React','Vite'],
+  },
+  {
+    id: 6,
     name: 'Rock Paper Scissors Lizard & Spock',
     description: "Game suggested by Sheldon (Big Bang Theory) built in Angular.",
     imageSrc: '/proj-rock.jpg',
