@@ -8,10 +8,16 @@ interface Props {
 
 // PDF hole main function
 export default function PdfHole({ item }: Props) {
+  // Conditional styling to avoid nested template literals
+  let shadowChooser =
+    item.id === 0
+      ? `shadow-inner1 hover:shadow-inner1-hover`
+      : `shadow-inner2 hover:shadow-inner2-hover`;
+
   // Exports a hole-shaped div with a pdf anchor inside it to ResumeChooser.tsx
   return (
     <div
-      className={`flex h-32 w-32 items-center justify-center rounded-xl ${item.id === 0 ? `shadow-inner1 hover:shadow-inner1-hover`: `shadow-inner2 hover:shadow-inner2-hover`}  transition-all duration-300 hover:translate-y-1 `}
+      className={`${shadowChooser} flex h-32 w-32 items-center justify-center rounded-xl  transition-all duration-300 hover:translate-y-1 `}
     >
       <a href={item.downloadPath} download>
         <img
