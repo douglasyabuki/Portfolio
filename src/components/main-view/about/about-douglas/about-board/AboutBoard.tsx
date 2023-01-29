@@ -23,6 +23,7 @@ export default function AboutBoard({ infoList }: Props) {
   const [currentSection, setCurrentSection] = useState<IAboutSection>(emptySection);
 
   // Condition to apply scale setting and avoid nesting template literals
+  let isCurrentIdNull = (currentSectionId === null) ? `-translate-x-0 block h-auto w-auto text-center` : `sticky top-32 w-fit h-0 -translate-x-6 lg:relative lg:top-0 lg:-translate-x-0`;
   let isCurrentEmpty = (currentSection !== emptySection) ? `scale-100` : `scale-0 `;
 
   // Whenever the user clicks a selector, both states change
@@ -35,7 +36,7 @@ export default function AboutBoard({ infoList }: Props) {
   // Returns the interactive info board about Douglas to AboutDouglas.tsx
   return (
     <div className="container relative block h-auto w-full lg:flex lg:py-20">
-      <div className={`${currentSectionId !== null ? `sticky top-32 w-fit h-0 -translate-x-6 lg:relative lg:top-0 lg:-translate-x-0`: `-translate-x-0 block h-auto w-auto text-center`} z-30 lg:z-20 space-y-4 lg:h-auto lg:mr-6 lg:py-12 transition-all duration-300`}>
+      <div className={`${isCurrentIdNull} z-30 lg:z-20 space-y-4 lg:h-auto lg:mr-6 lg:py-12 transition-all duration-300`}>
         {infoList.map((item) => (
           <AboutBoardSelector
             id={item.sectionId}
