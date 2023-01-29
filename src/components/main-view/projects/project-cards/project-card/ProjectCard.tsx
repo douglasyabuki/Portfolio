@@ -1,6 +1,5 @@
 // Interfaces
 import { IProject } from '../../../../../interfaces/IProject';
-import { ISkill } from '../../../../../interfaces/ISkill';
 
 // Components
 import CardImageFrame from './card-image-frame/CardImageFrame';
@@ -20,9 +19,13 @@ interface Props {
 
 // Project Card main function
 export default function ProjectCard({ item }: Props) {
-
   // Setting initial state to extensible card
   const [isExtended, setIsExtended] = useState<boolean>(false);
+
+  // Conditional styling based on id being even or odd to avoid nesting ternary operations
+  let backgroundChoose = item.id % 2 === 0 ? `custom-bg-1` : `custom-bg-2`;
+  let shouldTranslate = item.id % 2 === 0 ? `lg:-translate-x-20` : `lg:translate-x-20`;
+  let translateAndBackground = isExtended ? `cursor-default hover:shadow-outer ${backgroundChoose}` : `bg-background-div1 hover:-translate-y-5 hover:shadow-lg hover:shadow-translucid-black ${shouldTranslate}`;
 
   // Creating a new list of ISkill interface containing only techs used in the specific project
   const filteredSkills = skillList.filter((skill) => item.techs.includes(skill.skillName));
@@ -37,13 +40,7 @@ export default function ProjectCard({ item }: Props) {
     <div
       role={'button'}
       onClick={onClickHandler}
-      className={`${
-        isExtended
-          ? `cursor-default hover:shadow-outer ${item.id % 2 === 0 ? `custom-bg-1` : `custom-bg-2`}`
-          : `bg-background-div1 hover:-translate-y-5 hover:shadow-lg hover:shadow-translucid-black ${
-              item.id % 2 !== 0 ? `lg:translate-x-20` : `lg:-translate-x-20`
-            } `
-      } group container block h-auto w-auto transform space-y-8 rounded-xl  p-4 py-12 shadow-md shadow-translucid-black transition-all duration-300  xs:p-6 xs:py-16 md:rounded-3xl md:p-12 lg:m-auto lg:flex lg:min-h-[350px] lg:w-fit lg:space-y-0 lg:p-8 xl:p-12`}
+      className={`${translateAndBackground} group container block h-auto w-auto transform space-y-8 rounded-xl  p-4 py-12 shadow-md shadow-translucid-black transition-all duration-300  xs:p-6 xs:py-16 md:rounded-3xl md:p-12 lg:m-auto lg:flex lg:min-h-[350px] lg:w-fit lg:space-y-0 lg:p-8 xl:p-12`}
     >
       <CardMainFrame
         isExtended={isExtended}
