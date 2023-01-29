@@ -22,7 +22,7 @@ export default function AboutBoard({ infoList }: Props) {
   const [currentSectionId, setCurrentSectionId] = useState<number | null>(null);
   const [currentSection, setCurrentSection] = useState<IAboutSection>(emptySection);
 
-  // Condition to apply scale setting and avoid nesting template literals
+  // Conditional styling to avoid nested template literals
   let isCurrentIdNull = (currentSectionId === null) ? `-translate-x-0 block h-auto w-auto text-center` : `sticky top-32 w-fit h-0 -translate-x-6 lg:relative lg:top-0 lg:-translate-x-0`;
   let isCurrentEmpty = (currentSection !== emptySection) ? `scale-100` : `scale-0 `;
 

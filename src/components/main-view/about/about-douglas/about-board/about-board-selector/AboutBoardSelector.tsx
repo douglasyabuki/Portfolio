@@ -16,6 +16,10 @@ export default function AboutBoardSelector({ icon, title, id, currentId, onClick
   // Setting initial state to button
   const [isActive, setIsActive] = useState<boolean>(false);
 
+  // Conditional styling to avoid nested template literals
+  let isTranslucid = isActive ? `opacity-100` : `opacity-80`;
+  let isCurrentId = (currentId !== null) ? `scale-0 w-0 lg:scale-100 lg:w-32`: `scale-100 w-28 lg:w-32`;
+
   // Checks if the button id is the same as the user selected and changes the state based on its outcome
   useEffect(() => {
     if (currentId === id) {
@@ -30,7 +34,7 @@ export default function AboutBoardSelector({ icon, title, id, currentId, onClick
     <div
       role={'button'}
       onClick={onClickHandler}
-      className={`${isActive ? `opacity-100` : `opacity-80`} flex items-center justify-center space-x-6`}
+      className={`${isTranslucid} flex items-center justify-center space-x-6`}
     >
       <i
         className={
@@ -39,7 +43,7 @@ export default function AboutBoardSelector({ icon, title, id, currentId, onClick
             : `${icon} w-min group-hover:animate-spin text-xl md:text-xl 2xl:text-2xl 3xl:text-3xl`
         }
       ></i>
-      <h1 className={`${currentId !== null ? `scale-0 w-0 lg:scale-100 lg:w-32`: `scale-100 w-28 lg:w-32`} text-left h-auto font-sans text-xl lg:text-2xl transition-transform duration-300`}>{title}</h1>
+      <h1 className={`${isCurrentId} text-left h-auto font-sans text-xl lg:text-2xl transition-transform duration-300`}>{title}</h1>
     </div>
   );
 }
