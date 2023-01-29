@@ -22,6 +22,9 @@ export default function AboutBoard({ infoList }: Props) {
   const [currentSectionId, setCurrentSectionId] = useState<number | null>(null);
   const [currentSection, setCurrentSection] = useState<IAboutSection>(emptySection);
 
+  // Condition to apply scale setting and avoid nesting template literals
+  let isCurrentEmpty = (currentSection !== emptySection) ? `scale-100` : `scale-0 `;
+
   // Whenever the user clicks a selector, both states change
   const onClickHandler = (index: number) => {
     setCurrentSectionId(index);
@@ -44,7 +47,7 @@ export default function AboutBoard({ infoList }: Props) {
           ></AboutBoardSelector>
         ))}
       </div>
-        <div className={`${currentSection !== emptySection ? `scale-100` : `scale-0 `} custom-bg-2 container relative block w-full rounded-3xl shadow-md shadow-translucid-black transition-all duration-300`}>
+        <div className={`${isCurrentEmpty} custom-bg-2 container relative block w-full rounded-3xl shadow-md shadow-translucid-black transition-all duration-300`}>
           <AboutBoardFrame currentSection={currentSection}></AboutBoardFrame>
         </div>
     </div>
