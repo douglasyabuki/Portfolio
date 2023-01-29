@@ -2,7 +2,7 @@
 import { ITestimonial } from '../../../../../../interfaces/ITestimonial';
 
 // Hooks
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 // Const
 import TestimonialCard from '../testimonial-card/TestimonialCard';
