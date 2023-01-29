@@ -11,9 +11,6 @@ import { useState } from 'react';
 // Interfaces
 import { IAboutSection } from '../../../../../interfaces/IAboutSection';
 
-// Utils
-import { deepClone } from '../../../../../utils/deep-clone';
-
 // Props destructuring
 interface Props {
   infoList: IAboutSection[];
@@ -28,8 +25,7 @@ export default function AboutBoard({ infoList }: Props) {
   // Whenever the user clicks a selector, both states change
   const onClickHandler = (index: number) => {
     setCurrentSectionId(index);
-    let copy = deepClone(currentSection);
-    copy = infoList[index];
+    let copy = infoList[index];
     setCurrentSection(copy);
   };
 
