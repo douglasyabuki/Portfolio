@@ -2,11 +2,9 @@
 import { ITestimonial } from '../../../../interfaces/ITestimonial';
 
 // Components
-import TestimonialCard from './testimonial-row/testimonial-card/TestimonialCard';
 import TestimonialRow from './testimonial-row/TestimonialRow';
 
 // Hooks
-import { useState } from 'react';
 interface Props {
   list: ITestimonial[];
 }
