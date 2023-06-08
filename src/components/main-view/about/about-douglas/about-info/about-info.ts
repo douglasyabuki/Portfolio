@@ -41,7 +41,7 @@ export const aboutInfo: IAboutInfo = {
     {
       sectionId: 4,
       sectionIcon: 'fa fa-glass',
-      sectionTitle: 'Entertainment',
+      sectionTitle: 'Bar',
       sectionContent: 'Former bar chef. His creativity, social skills and passion for mixology allowed him to create signature cocktails while guaranteeing a great customer experience. With a deep understanding of different flavors, he could skillfully combine ingredients to create harmonious and tantalizing taste experiences.',
       sectionImage: '/cocktail.jpg',
       sectionImageAlt: 'Photo by Ash Edmonds on Unsplash'

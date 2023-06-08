@@ -13,7 +13,7 @@ export default function TestimonialCard({ position, relation, testimonial, href 
     <div className="group container relative w-[300px] h-[450px] max-lg:m-auto md:w-[400px] md:h-[700px] lg:w-[300px] lg:h-[450px] xl:w-[400px] xl:h-[600px] scale-90 rounded-xl bg-background-div1 p-4 text-center shadow-lg shadow-translucid-black duration-300 hover:scale-95 sm:p-7 md:p-8 lg:p-4 xl:p-8">
       <div className="container relative flex items-center h-3/5">
         <i className="fa fa-quote-left absolute left-0 top-0 text-5xl text-purplish-gray opacity-20"></i>
-        <p className="pt-4 text-base md:text-2xl lg:text-base xl:text-2xl opacity-80 px-2 md:mb-6">{testimonial}</p>
+        <p className="pt-4 text-base md:text-2xl lg:text-base xl:text-xl opacity-80 px-2 md:mb-6">{testimonial}</p>
       </div>
       <div className="container items-end">
         <i className="fa fa-user-circle-o m-5 block text-5xl md:text-7xl lg:text-5xl xl:text-7xl group-hover:hidden"></i>

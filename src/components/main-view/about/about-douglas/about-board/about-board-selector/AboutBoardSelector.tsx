@@ -34,8 +34,9 @@ export default function AboutBoardSelector({ icon, title, id, currentId, onClick
     <div
       role={'button'}
       onClick={onClickHandler}
-      className={`${isTranslucid} flex items-center justify-center space-x-6`}
+      className={`${isTranslucid} flex items-center justify-center space-x-8`}
     >
+      <div className={`min-w-[30px] flex justify-center`}>
       <i
         className={
           isActive
@@ -43,6 +44,7 @@ export default function AboutBoardSelector({ icon, title, id, currentId, onClick
             : `${icon} w-min group-hover:animate-spin text-xl md:text-xl 2xl:text-2xl 3xl:text-3xl`
         }
       ></i>
+      </div>
       <h1 className={`${isCurrentId} text-left h-auto font-sans text-xl lg:text-2xl transition-transform duration-300`}>{title}</h1>
     </div>
   );
