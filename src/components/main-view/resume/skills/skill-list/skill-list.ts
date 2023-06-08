@@ -68,23 +68,72 @@ export const skillList: ISkill[] = [
   },
   {
     id: 9,
-    skillName: 'Vue',
-    skillIcon: 'devicon-vuejs-plain',
-    skillUrl: 'https://vuejs.org/',
-    learning: true
+    skillName: 'NodeJS',
+    skillIcon: 'devicon-nodejs-plain',
+    skillUrl: 'https://nodejs.org/en/',
+    learning: false
   },
   {
     id: 10,
     skillName: 'Express',
     skillIcon: 'devicon-express-original',
     skillUrl: 'https://expressjs.com/',
-    learning: true
+    learning: false
+  },
+  {
+    id: 10,
+    skillName: 'Sequelize',
+    skillIcon: 'devicon-sequelize-plain',
+    skillUrl: 'https://sequelize.org/',
+    learning: false
   },
   {
     id: 11,
-    skillName: 'NodeJS',
-    skillIcon: 'devicon-nodejs-plain',
-    skillUrl: 'https://nodejs.org/en/',
+    skillName: 'Docker',
+    skillIcon: 'devicon-docker-plain',
+    skillUrl: 'https://www.docker.com/',
+    learning: false
+  },
+  {
+    id: 12,
+    skillName: 'PostgreSQL',
+    skillIcon: 'devicon-postgresql-plain',
+    skillUrl: 'https://www.postgresql.org/',
+    learning: false
+  },
+  {
+    id: 13,
+    skillName: 'MySQL',
+    skillIcon: 'devicon-mysql-plain',
+    skillUrl: 'https://www.postgresql.org/',
+    learning: false
+  },
+  {
+    id: 14,
+    skillName: 'Redis',
+    skillIcon: 'devicon-redis-plain',
+    skillUrl: 'https://redis.io/',
+    learning: false
+  },
+  {
+    id: 15,
+    skillName: 'Python',
+    skillIcon: 'devicon-python-plain',
+    skillUrl: 'https://www.python.org/',
+    learning: false
+  },
+  {
+    id: 16,
+    skillName: 'Kotlin',
+    skillIcon: 'devicon-kotlin-plain',
+    skillUrl: 'https://www.kotlinlang.org/',
+    learning: false
+  },
+  {
+    id: 17,
+    skillName: 'Vue',
+    skillIcon: 'devicon-vuejs-plain',
+    skillUrl: 'https://vuejs.org/',
     learning: true
   },
 ]
