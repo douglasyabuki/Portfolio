@@ -17,7 +17,7 @@ export const educationList: IEducation[] = [
     degree: 'System Analysis and Development',
     category: "Technology's degree",
     icon: 'fa fa-cog',
-    current: true
+    current: false
   },
   {
     id: 2,
