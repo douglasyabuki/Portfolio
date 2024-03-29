@@ -25,7 +25,9 @@ export default function ProjectCard({ item }: Props) {
   // Conditional styling based on id being even or odd to avoid nesting ternary operations
   let backgroundChoose = item.id % 2 === 0 ? `custom-bg-1` : `custom-bg-2`;
   let shouldTranslate = item.id % 2 === 0 ? `lg:-translate-x-20` : `lg:translate-x-20`;
-  let translateAndBackground = isExtended ? `cursor-default hover:shadow-outer ${backgroundChoose}` : `bg-background-div1 hover:-translate-y-5 hover:shadow-lg hover:shadow-translucid-black ${shouldTranslate}`;
+  let translateAndBackground = isExtended
+    ? `cursor-default hover:shadow-outer ${backgroundChoose}`
+    : `bg-background-div1 hover:-translate-y-5 hover:shadow-lg hover:shadow-translucid-black ${shouldTranslate}`;
 
   // Creating a new list of ISkill interface containing only techs used in the specific project
   const filteredSkills = skillList.filter((skill) => item.techs.includes(skill.skillName));

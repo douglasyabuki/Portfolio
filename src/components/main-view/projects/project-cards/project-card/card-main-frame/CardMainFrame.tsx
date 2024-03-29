@@ -1,5 +1,5 @@
 // Interfaces
-import { ISkill } from "../../../../../../interfaces/ISkill";
+import { ISkill } from '../../../../../../interfaces/ISkill';
 
 // Props destructuring
 interface Props {
@@ -10,14 +10,18 @@ interface Props {
 }
 
 // Card main frame main function
-export default function CardMainFrame({projectName, projectDescription, isExtended, technologies}: Props) {
-
+export default function CardMainFrame({
+  projectName,
+  projectDescription,
+  isExtended,
+  technologies,
+}: Props) {
   // Returns the title, description and technologies to ProjectCard.tsx
   return (
     <div
       className={`${
-        isExtended ? `` : `lg:w-72 2xl:w-96`
-      } flex-col space-y-8 text-center align-middle lg:py-12 xl:space-y-12 xl:py-16`}
+        isExtended ? `min-w-[30vw] lg:py-12 xl:py-16` : `py-3 lg:w-72 2xl:w-96`
+      } flex-col space-y-8 text-center align-middle xl:space-y-12`}
     >
       <div className="block space-y-8">
         <h2 className="mb-2 text-xl font-bold xs:text-2xl md:text-4xl lg:text-2xl xl:mb-4 xl:text-3xl 2xl:text-4xl">
@@ -41,9 +45,11 @@ export default function CardMainFrame({projectName, projectDescription, isExtend
           ))}
         </div>
       </div>
-      <h3 className="opacity-60 xs:text-lg md:text-xl lg:px-4 lg:text-lg xl:text-xl 2xl:text-3xl">
-        {projectDescription}
-      </h3>
+      <div className="flex h-full w-full justify-center opacity-60 lg:px-4 xl:py-3">
+        <h3 className="xs:text-lg md:text-xl lg:max-w-[400px] lg:text-lg xl:text-xl 2xl:text-3xl">
+          {projectDescription}
+        </h3>
+      </div>
     </div>
   );
 }
