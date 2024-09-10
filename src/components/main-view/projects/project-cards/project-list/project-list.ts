@@ -4,18 +4,18 @@ import { IProject } from '../../../../../interfaces/IProject';
 // Exports the list of projects to Projects.tsx
 export const projectList: IProject[] = [
   {
-    id: 0,
-    name: 'Yuji Hub',
+    id: 1,
+    name: 'YujInsights',
     description:
-      'A learning hub still under development. PostgreSQL as database and Next AppRouter as framework.',
-    imageSrc: '/proj-yujihub.jpg',
-    imageAlt: 'Screenshot of my Yuji Hub project',
-    url: 'https://yuji-hub.vercel.app/',
-    gitUrl: 'https://github.com/douglasyabuki/yuji-hub',
-    techs: ['HTML5', 'Tailwind', 'TypeScript', 'React', 'NextJS', 'PostgreSQL'],
+      'A learning hub still under development. Vite (React + TypeScript) and Vercel PostgreSQL as database.',
+    imageSrc: '/proj-yujinsights.jpg',
+    imageAlt: 'Screenshot of my YujInsights project',
+    url: 'https://yujinsights.vercel.app/',
+    gitUrl: 'https://github.com/douglasyabuki/yujinsights',
+    techs: ['HTML5', 'Tailwind', 'TypeScript', 'React', 'Vite', 'PostgreSQL'],
   },
   {
-    id: 1,
+    id: 2,
     name: 'Rest Countries API',
     description:
       'Front End Mentor challenge built in Next (AppRouter) and deployed on Vercel. Includes mock API response. There is a hidden game in this project.',
@@ -26,7 +26,7 @@ export const projectList: IProject[] = [
     techs: ['HTML5', 'Tailwind', 'TypeScript', 'React', 'NextJS'],
   },
   {
-    id: 2,
+    id: 3,
     name: 'Portfolio',
     description:
       'A portfolio website made with React + TypeScript + Tailwind made with Vite and deployed on Vercel',
@@ -37,7 +37,7 @@ export const projectList: IProject[] = [
     techs: ['HTML5', 'Tailwind', 'TypeScript', 'React', 'Vite'],
   },
   {
-    id: 3,
+    id: 4,
     name: 'Netflix Clone',
     description:
       "Legally cloning Netflix's website with React + TypeScript + Tailwind on Vite. Consuming API from themoviedb.org.",
@@ -48,7 +48,7 @@ export const projectList: IProject[] = [
     techs: ['HTML5', 'Tailwind', 'TypeScript', 'React', 'Vite'],
   },
   {
-    id: 4,
+    id: 5,
     name: 'Sudoku Solver',
     description: 'React + TypeScript sudoku solver app using Next.js. Fetches data from own API.',
     imageSrc: '/proj-sudoku.jpg',
@@ -58,7 +58,7 @@ export const projectList: IProject[] = [
     techs: ['HTML5', 'CSS3', 'TypeScript', 'React', 'NextJS'],
   },
   {
-    id: 5,
+    id: 6,
     name: 'Memory Game',
     description: 'A React + TypeScript memory game using Vite.',
     imageSrc: '/proj-memory.jpg',
@@ -68,7 +68,7 @@ export const projectList: IProject[] = [
     techs: ['HTML5', 'CSS3', 'TypeScript', 'React', 'Vite'],
   },
   {
-    id: 6,
+    id: 7,
     name: 'Tic tac toe',
     description: 'A simple React + TypeScript Tic-Tac-Toe game using Vite.',
     imageSrc: '/proj-tic.jpg',
@@ -78,7 +78,7 @@ export const projectList: IProject[] = [
     techs: ['HTML5', 'CSS3', 'TypeScript', 'React', 'Vite'],
   },
   {
-    id: 7,
+    id: 8,
     name: 'Todo list',
     description: 'The classic todo list using React + TypeScript and Vite.',
     imageSrc: '/proj-todo.jpg',
@@ -88,7 +88,7 @@ export const projectList: IProject[] = [
     techs: ['HTML5', 'CSS3', 'TypeScript', 'React', 'Vite'],
   },
   {
-    id: 8,
+    id: 9,
     name: 'Rock Paper Scissors Lizard & Spock',
     description: 'Game suggested by Sheldon (Big Bang Theory) built in Angular.',
     imageSrc: '/proj-rock.jpg',
