@@ -8,9 +8,9 @@ export default function LearnMoreButton() {
     <a
       href="#about"
       onClick={() => scrollOnClick('#about')}
-      className="flex h-auto w-fit min-w-[9rem] items-center justify-center gap-2 rounded-full bg-background-div2 px-4 py-2 align-middle font-semibold text-not-so-white shadow-lg  shadow-black/10 transition-all duration-300 hover:bg-not-so-white hover:text-background-black xs:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl"
+      className="flex h-auto w-auto min-w-[9.5rem] items-center justify-start gap-2 rounded-full bg-background-div2 px-4 py-2 align-middle font-semibold text-not-so-white shadow-lg  shadow-black/10 transition-all duration-300 hover:bg-not-so-white hover:text-background-black xs:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl box-border border-[1px] border-white/10"
     >
-      <i className="fa fa-info-circle h-fit"></i>
+      <i className="fa fa-info-circle w-6"></i>
       Learn more
     </a>
   );

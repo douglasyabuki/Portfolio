@@ -4,16 +4,16 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'outer' : '0px 5px 10px 0px rgba(255,255,255,0.7);',
-        'outer-hover': '0px 10px 20px 2px rgba(255,255,255,0.7);',
-        'inner1' : 'inset 0 5px 10px 0 rgba(0,255,0,0.7);',
-        'inner1-hover' : 'inset 0px 10px 20px 2px rgba(0,255,0,0.7);',
-        'inner2' : 'inset 0 5px 10px 0 rgba(255,0,0,0.7);',
-        'inner2-hover' : 'inset 0 10px 20px 2px rgba(255,0,0,0.7);',
-        'inner3' : 'inset 0 5px 10px 0 rgba(0,0,0,0.7);',
-        'inner3-hover' : 'inset 0 8px 15px 2px rgba(0,0,0,0.7);',
-        'inner4' : 'inset 0 5px 10px 0 rgba(255,255,255,0.7);',
-        'inner4-hover' : 'inset 0 8px 15px 2px rgba(255,255,255,0.7);',
+        'outer' : '0px 5px 10px 0px rgba(255,255,255,0.5);',
+        'outer-hover': '0px 5px 10px 2px rgba(255,255,255,0.5);',
+        'inner1' : 'inset 0 5px 10px 0 rgba(0,255,0,0.5);',
+        'inner1-hover' : 'inset 0px 10px 20px 2px rgba(0,255,0,0.5);',
+        'inner2' : 'inset 0 5px 10px 0 rgba(255,0,0,0.5);',
+        'inner2-hover' : 'inset 0 10px 20px 2px rgba(255,0,0,0.5);',
+        'inner3' : 'inset 0 5px 10px 0 rgba(0,0,0,0.5);',
+        'inner3-hover' : 'inset 0 8px 15px 2px rgba(0,0,0,0.5);',
+        'inner4' : 'inset 0 5px 10px 0 rgba(255,255,255,0.5);',
+        'inner4-hover' : 'inset 0 8px 15px 2px rgba(255,255,255,0.5);',
       },
       screens: {
         'xs' : '480px',

@@ -2,7 +2,7 @@
 import { IResume } from '../../../../../../interfaces/IResume';
 
 // Hooks
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // Props destructuring
 export interface Props {
@@ -32,13 +32,11 @@ export default function FlagButton({ item, currentLanguage, setCurrentLanguage }
       role={'button'}
       onClick={onClickHandler}
       className={`${
-        isActive ? 'shadow-outer' : 'shadow-md shadow-translucid-black'
-      } hover:shadow-outer-hover flex h-20 w-auto items-center justify-center gap-2 rounded-xl p-2 transition-all duration-300`}
+        isActive ? 'shadow-outer' : 'shadow-md shadow-black/10'
+      } flex h-20 w-auto items-center justify-center gap-2 rounded-xl p-2 transition-all duration-300 hover:shadow-outer-hover`}
     >
       <img
-        className={`${
-          isActive ? 'h-16 w-16' : 'h-12 w-12'
-        } cover rounded-full transition-all duration-300`}
+        className={`cover h-12 w-12 rounded-full transition-all duration-300`}
         src={item.img}
         alt={item.imgAlt}
       />
