@@ -1,5 +1,5 @@
 // Interface
-import { ISkill } from "../../../../../interfaces/ISkill"
+import { ISkill } from '../../../../../interfaces/ISkill';
 
 // Exports the list of skills to Skills.tsx
 export const skillList: ISkill[] = [
@@ -8,132 +8,141 @@ export const skillList: ISkill[] = [
     skillName: 'HTML5',
     skillIcon: 'devicon-html5-plain',
     skillUrl: 'https://html.spec.whatwg.org/',
-    learning: false
+    learning: false,
   },
   {
     id: 1,
     skillName: 'CSS3',
     skillIcon: 'devicon-css3-plain',
     skillUrl: 'https://www.w3.org/Style/CSS/',
-    learning: false
+    learning: false,
   },
   {
     id: 2,
     skillName: 'Tailwind',
     skillIcon: 'devicon-tailwindcss-plain',
     skillUrl: 'https://tailwindcss.com/',
-    learning: false
+    learning: false,
   },
   {
     id: 3,
     skillName: 'JavaScript',
     skillIcon: 'devicon-javascript-plain',
     skillUrl: 'https://www.ecma-international.org/publications-and-standards/standards/ecma-262/',
-    learning: false
+    learning: false,
   },
   {
     id: 4,
     skillName: 'TypeScript',
     skillIcon: 'devicon-typescript-plain',
     skillUrl: 'https://www.typescriptlang.org/',
-    learning: false
+    learning: false,
   },
   {
     id: 5,
     skillName: 'React',
     skillIcon: 'devicon-react-original',
     skillUrl: 'https://beta.reactjs.org/',
-    learning: false
+    learning: false,
   },
   {
     id: 6,
     skillName: 'Angular',
     skillIcon: 'devicon-angularjs-plain',
     skillUrl: 'https://angular.io/',
-    learning: false
+    learning: false,
   },
   {
     id: 7,
     skillName: 'NextJS',
-    skillIcon: 'devicon-nextjs-original',
+    skillIcon: 'devicon-nextjs-plain',
     skillUrl: 'https://nextjs.org/',
-    learning: false
+    learning: false,
   },
   {
     id: 8,
-    skillName: 'Vite',
-    skillIcon: '', skillImg: '/vite.svg', skillImgAlt: 'Vite Icon',
-    skillUrl: 'https://vitejs.dev/',
-    learning: false
+    skillName: 'Solidjs',
+    skillIcon: 'devicon-solidjs-plain',
+    skillUrl: 'https://www.solidjs.com/',
+    learning: false,
   },
   {
     id: 9,
-    skillName: 'NodeJS',
-    skillIcon: 'devicon-nodejs-plain',
-    skillUrl: 'https://nodejs.org/en/',
-    learning: false
+    skillName: 'Vite',
+    skillIcon: '',
+    skillImg: '/vite.svg',
+    skillImgAlt: 'Vite Icon',
+    skillUrl: 'https://vitejs.dev/',
+    learning: false,
   },
   {
     id: 10,
-    skillName: 'Express',
-    skillIcon: 'devicon-express-original',
-    skillUrl: 'https://expressjs.com/',
-    learning: false
+    skillName: 'NodeJS',
+    skillIcon: 'devicon-nodejs-plain',
+    skillUrl: 'https://nodejs.org/en/',
+    learning: false,
   },
   {
     id: 11,
-    skillName: 'Sequelize',
-    skillIcon: 'devicon-sequelize-plain',
-    skillUrl: 'https://sequelize.org/',
-    learning: false
+    skillName: 'Express',
+    skillIcon: 'devicon-express-original',
+    skillUrl: 'https://expressjs.com/',
+    learning: false,
   },
   {
     id: 12,
-    skillName: 'Docker',
-    skillIcon: 'devicon-docker-plain',
-    skillUrl: 'https://www.docker.com/',
-    learning: false
+    skillName: 'Sequelize',
+    skillIcon: 'devicon-sequelize-plain',
+    skillUrl: 'https://sequelize.org/',
+    learning: false,
   },
   {
     id: 13,
-    skillName: 'PostgreSQL',
-    skillIcon: 'devicon-postgresql-plain',
-    skillUrl: 'https://www.postgresql.org/',
-    learning: false
+    skillName: 'Docker',
+    skillIcon: 'devicon-docker-plain',
+    skillUrl: 'https://www.docker.com/',
+    learning: false,
   },
   {
     id: 14,
-    skillName: 'MySQL',
-    skillIcon: 'devicon-mysql-plain',
+    skillName: 'PostgreSQL',
+    skillIcon: 'devicon-postgresql-plain',
     skillUrl: 'https://www.postgresql.org/',
-    learning: false
+    learning: false,
   },
   {
     id: 15,
-    skillName: 'Redis',
-    skillIcon: 'devicon-redis-plain',
-    skillUrl: 'https://redis.io/',
-    learning: false
+    skillName: 'MySQL',
+    skillIcon: 'devicon-mysql-plain',
+    skillUrl: 'https://www.postgresql.org/',
+    learning: false,
   },
   {
     id: 16,
-    skillName: 'Python',
-    skillIcon: 'devicon-python-plain',
-    skillUrl: 'https://www.python.org/',
-    learning: false
+    skillName: 'Redis',
+    skillIcon: 'devicon-redis-plain',
+    skillUrl: 'https://redis.io/',
+    learning: false,
   },
   {
     id: 17,
-    skillName: 'Kotlin',
-    skillIcon: 'devicon-kotlin-plain',
-    skillUrl: 'https://www.kotlinlang.org/',
-    learning: false
+    skillName: 'Python',
+    skillIcon: 'devicon-python-plain',
+    skillUrl: 'https://www.python.org/',
+    learning: false,
   },
   {
     id: 18,
+    skillName: 'Kotlin',
+    skillIcon: 'devicon-kotlin-plain',
+    skillUrl: 'https://www.kotlinlang.org/',
+    learning: false,
+  },
+  {
+    id: 19,
     skillName: 'Go',
     skillIcon: 'devicon-go-plain',
     skillUrl: 'https://go.dev/',
-    learning: true
+    learning: true,
   },
-]
+];

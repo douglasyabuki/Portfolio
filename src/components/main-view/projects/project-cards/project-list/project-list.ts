@@ -4,6 +4,17 @@ import { IProject } from '../../../../../interfaces/IProject';
 // Exports the list of projects to Projects.tsx
 export const projectList: IProject[] = [
   {
+    id: 0,
+    name: '3D Tic-Tac-Toe',
+    description:
+      'A 3D tic-tac-toe game created with Solid.js.',
+    imageSrc: '/proj-3d-tic-tac-toe.jpg',
+    imageAlt: 'Screenshot of my 3D tic-tac-toe project',
+    url: 'https://solid-3d-tic-tac-toe.vercel.app/',
+    gitUrl: 'https://github.com/douglasyabuki/solid-3d-tic-tac-toe',
+    techs: ['HTML5', 'Tailwind', 'TypeScript', 'Solidjs', 'Vite'],
+  },
+  {
     id: 1,
     name: 'YujInsights',
     description:
