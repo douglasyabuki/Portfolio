@@ -8,7 +8,7 @@ export const resumeList:IResume[] = [
     language:'PT-BR' ,
     img:'brazil-flag.svg',
     imgAlt:'Brazilian flag',
-    downloadPath:'/DOUGLAS-YUJI-YABUKI-CURRICULO.pdf',
+    downloadPath:'/DOUGLAS_YABUKI_CV.pdf',
     svg:'/brazil-pdf.svg',
     svgAlt:'SVG from w3.org'},
   {
@@ -16,7 +16,7 @@ export const resumeList:IResume[] = [
     language:'EN-US' ,
     img:'usa-flag.svg',
     imgAlt:'American flag',
-    downloadPath:'/DOUGLAS-YUJI-YABUKI-RESUME.pdf',
+    downloadPath:'/DOUGLAS_YABUKI_RESUME.pdf',
     svg:'/usa-pdf.svg',
     svgAlt:'SVG from w3.org'},
 ]
